@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="PREMS EXOTICS" />
+    <meta name="keywords" content="Tailwind CSS" />
+    <meta name="author" content="Smooky Dev" />
+    <meta name="theme-color" content="#abd373">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PREMS EXOTICS</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body class="bg-no-repeat w-full bg-cover bg-center debug-screens">
+    <!-- ========== Start Header ========== -->
+    <header class="w-full header transition-all z-[80]" data-header>
+        <div class="responsive flex items-center justify-between gap-5 py-5">
+            <div class="lgogsite inline-flex items-center gap-2">
+                <img loading="lazy" src="img/logo.png" alt="" class="w-24 object-center object-cover">
+            </div>
+            <div class="hidden lg:flex">
+                <ul class="flex items-center justify-between gap-10 [&_li]:text-gray-900 [&_li]:tracking-normal [&_li]:font-medium [&_li]:capitalize">
+                    <li class="linkoutline"><a href="#top">Home</a></li>
+                    <li class="linkoutline"><a href="#bottom">About Us</a></li>
+                    <li class="linkoutline"><a href="plants.html">Our Shop</a></li>
+                    <li class="linkoutline"><a href="#customer">Our Customer</a></li>
+                    <li class="linkoutline"><a href="#bottom">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- ========== Start Mobile View ========== -->
+            <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]" data-nav-toggler data-nav-toggle-btn>
+                <span class="px-3 py-[1px] bg-cream btn11 transition-all"></span>
+                <span class="px-3 py-[1px] bg-cream btn22 transition-all"></span>
+            </div>
+
+            <nav class="navbar lg:hidden h-screen bg-lightgray fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]" data-navbar>
+                <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                    <img loading="lazy" src="img/logofooter.png" alt="" class="w-56 object-center object-cover">
+                </div>
+                <ul class="flex flex-col items-center justify-center w-full [&_li]:font-semibold gap-8 py-20 capitalize [&_li]:text-white [&_li]:cursor-pointer">
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#top">Home</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#bottom">About Us</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="plants.html">Our Shop</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#customer">Our Customer</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#bottom">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="cartbtn flex max-w-max items-center justify-center mx-auto group mt-20">
+                    <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
+                    <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+                </div>
+
+            </nav>
+            <div class="overlay h-screen top-0 left-0 bg-darkblue fixed z-[70] w-screen opacity-0 pointer-events-none" data-overlay data-nav-toggler></div>
+
+            <!-- ========== End Mobile View ========== -->
+            <div class="cartbtn group">
+                <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
+                <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== End Header ========== -->
+
+    <!-- ========== Start Hero Section ========== -->
+    <section class="hero-section bg-[url('img/heromain2.jpg')] bg-center bg-cover h-[95vh]" style="background-image: url(img/heromain2.jpg);">
+        <div class="responsive flex items-center justify-center text-gray-900 gap-10 py-20 h-full">
+            <div class="txt w-full flex items-center text-center justify-center flex-col gap-10">
+                <p class="text-6xl font-bold text-white tracking-normal md:tracking-wider leading-[80px]">
+                    #BEST <span class="text-glowylw">PLANT COLLECTION </span>
+                </p>
+                <div class="inline-flex gap-5">
+                    <button class="expbtn">
+                        <a href="plants.html">Explore Now</a>
+                        <ion-icon name="caret-forward-sharp"></ion-icon>
+                    </button>
+                    <button class="btun3"><a href="#order-now">Order Now</a></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== End Hero Section ========== -->
+
+    <!-- ========== Start Shop Feature Section ========== -->
+    <section class="Shop Feature-section" id="order-now">
+        <div class="container responsive flex flex-col items-center justify-center py-10 gap-5">
+            <p class="text-5xl text-glowylw font-semibold tracking-widest uppercase text-center">
+                Featured Categories
+            </p>
+            <p class="uppercase text-gray-800 text-xl font-semibold tracking-wide text-center">
+                lets check popular products
+            </p>
+
+            <div class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
+                <div class="product card2 group box" data-name="p-1">
+                    <img loading="lazy" src="img/Money Plant N joy.png" alt="" srcset="" class="w-44 card1img" />
+                    <p class="cardtxt">
+                        Money Plant N' Joy
+                    </p>
+                    <p class="blueberry">
+                        This plant is perfect for adding a splash of green and white to any corner of your home!
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N' Joy for ₹75/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="product card2 group box" data-name="p-2">
+                    <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" srcset="" class="w-44 card1img" />
+                    <p class="cardtxt">
+                        Money Plant Compact (Manjula)
+                    </p>
+                    <p class="blueberry">
+                        This plant is perfect for adding a touch of elegance to any small space!
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Money Plant Compact (Manjula) for ₹75/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="product card2 group box" data-name="p-3">
+                    <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt="" srcset="" class="w-44 card1img" />
+                    <p class="cardtxt">
+                        Pepromia Dwarf Compact
+                    </p>
+                    <p class="blueberry">
+                        Perfect for adding a playful touch to any small space!
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Pepromia Dwarf Compact for ₹75/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="product card2 group box" data-name="p-4">
+                    <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt="" srcset="" class="w-44 card1img" />
+                    <p class="cardtxt">
+                        Philodendron Ciylon Red
+                    </p>
+                    <p class="blueberry">
+                        Delightful addition to your desk or shelf, offering a touch of elegance!
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹50/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Philodendron Ciylon Red for ₹50/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="inline-flex gap-5">
+                <button class="expbtn  text-gray-900 px-8" >
+                    <a href="plants.html">Show More</a>
+                        <ion-icon name="caret-forward-sharp"></ion-icon>
+                    </button>
+            <div class="products-preview">
+
+                <div class="preview " data-target="p-1">
+                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
+                    <img src="img/1.png" alt="" class="pop-card-image">
+                    <h3 class="text-2xl font-bold text-lightgreen">Money Plant N' Joy</h3>
+                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
+                        The Money Plant N' Joy is a beautiful and easy-to-care-for houseplant known for its stunning variegated green and white leaves. Thriving in low to bright indirect light and requiring minimal watering, this plant is perfect for both beginners and seasoned plant enthusiasts. Its cascading foliage makes it a wonderful choice for hanging baskets, shelves, or tabletops, adding a touch of natural elegance to any indoor space.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text text-2xl md:text-4xl">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Money Plant N' Joy Plant for ₹75/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="preview " data-target="p-2">
+                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
+                    <img src="img/2.png" alt="" class="pop-card-image">
+                    <h3 class="text-2xl font-bold text-lightgreen">Money Plant Compact (Manjula)</h3>
+                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
+                        The Money Plant Compact (Manjula) is a stunning houseplant known for its heart-shaped leaves with unique white and green variegation. This easy-to-care-for plant thrives in low to bright indirect light and requires minimal watering, making it ideal for both novice and experienced plant enthusiasts. Its compact size and lush foliage make it a perfect choice for desktops, shelves, or small spaces, bringing a touch of elegance and charm to any room.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text text-2xl md:text-4xl">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Money Plant Compact (Manjula) for ₹75/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="preview " data-target="p-3">
+                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
+                    <img src="img/3.png" alt="" class="pop-card-image">
+                    <h3 class="text-2xl font-bold text-lightgreen">Aloe Juvenna</h3>
+                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
+                        The Aloe Juvenna Plant, often called the "Tiger Tooth Aloe," is a delightful succulent known for its compact rosette shape and spiky, toothed leaves. These leaves are bright green with charming white spots, giving the plant a playful and unique appearance. Easy to care for, Aloe Juvenna thrives in bright, indirect light and requires minimal watering, making it an ideal choice for both beginners and experienced plant enthusiasts. Perfect for small spaces, windowsills, or as part of a succulent arrangement, this hardy plant adds a touch of vibrant greenery to any setting.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text text-2xl md:text-4xl">
+                            ₹349/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Aloe Juvenn for ₹349/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="preview " data-target="p-4">
+                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
+                    <img src="img/4.png" alt="" class="pop-card-image">
+                    <h3 class="text-2xl font-bold text-lightgreen">Aloe Blizzard</h3>
+                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
+                        The Aloe Blizzard Plant is a beautiful succulent with striking green and white leaves that look like a winter blizzard. Easy to care for, it thrives in bright, indirect light and only needs a little water, making it perfect for both beginners and experienced plant lovers. Whether you keep it indoors or in a warm outdoor spot, this charming plant adds a touch of natural beauty to any space.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text text-2xl md:text-4xl">
+                            ₹349/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Aralia Variegated Mini Plant for ₹236/-" target="_blank">Order Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- ========== End Shop Feature Section ========== -->
+
+    <!-- ========== Start Services Card Section ========== -->
+    <section class="service-card-section">
+        <div class="responsive flex flex-col  sm:flex-row  items-center justify-center py-10 gap-5 lg:gap-10 w-full">
+            <div class="card1 group w-full md:w-auto">
+                <ion-icon name="bag-sharp" class="card1img"></ion-icon>
+                <!-- <img loading="lazy" src="img/c1.png" alt="" srcset="" class="card1img" /> -->
+                <p class="cardtxt">
+                    Reliable Products
+                </p>
+                <p class="blueberry">100% reliable and authetic</p>
+            </div>
+            <div class="card1 group w-full md:w-auto">
+                <ion-icon name="headset-sharp" class="card1img"></ion-icon>
+                <p class="cardtxt">
+                    Support 24/7
+                </p>
+                <p class="blueberry">Contact us 24 hrs a day</p>
+            </div>
+            <div class="card1 group w-full md:w-auto">
+                <ion-icon name="lock-open-sharp" class="card1img"></ion-icon>
+                <p class="cardtxt">
+                    Payment Secure
+                </p>
+                <p class="blueberry">Free shipping on order</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== End Services Card Section ========== -->
+
+    <!-- ========== Start Special Offer Section ========== -->
+    <section class="special-offer-section">
+        <div class="responsive flex flex-col md:flex-row  items-center justify-center text-gray-900 gap-10 py-10">
+            <div class="w-full">
+                <img loading="lazy" src="img/10.png" alt="" class="object-center object-cover" />
+            </div>
+            <div class="txt w-full flex items-start justify-center flex-col gap-5">
+                <span class="text-glowylw text-3xl">#SPECIAL OFFER</span>
+                <p class="text-6xl md:text-6xl font-bold tracking-normal md:tracking-wider lg:leading-[80px]">
+                    PREMS EXOTICS KIT-I
+                </p>
+                <p class="text-gray-800">
+                    From planter materials to style options, discover which planter is best for your space.
+                </p>
+                <div class="inline-flex gap-5">
+                    <button class="expbtn"> 
+                        <a href="plants.html">Explore the shop</a>
+
+
+
+
+
+
+                        
+                        <ion-icon name="caret-forward-sharp"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== End Special Offer Section ========== -->
+    <!-- ========== Start Product over-view ========== -->
+
+
+    <!-- ========== End Product over-view ========== -->
+
+    <!-- ========== Start Tips Section ========== -->
+    <section class="Tips-section" >
+        <div class="responsive flex flex-col md:flex-row  items-center justify-center text-gray-900 gap-5 py-10">
+            <div class="w-full">
+                <img loading="lazy" src="img/12.png" alt="" class="tips-image" />
+            </div>
+            <div class="w-full">
+                <img loading="lazy" src="img/13.png" alt="" class="tips-image" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== End Tips Section ========== -->
+
+    <!-- ========== Start Customers Section ========== -->
+    <section class="Customers-section" id="customer">
+        <div class="responsive flex flex-col items-center justify-center py-10 gap-5">
+            <p class="text-5xl text-glowylw font-semibold tracking-widest uppercase text-center">
+                OUR CUSTOMERS
+            </p>
+            <p class="uppercase text-gray-800 text-xl font-semibold tracking-wide text-center">
+                CLIENT REVIEW ABOUT OUR PRODUCT
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 py-10">
+                <div class="card3 gorup">
+                    <p class="blueberry">
+                        I bought a fiddle leaf fig, and it's perfect! Arrived in great condition with clear care instructions. The customer service was fantastic. Highly recommend for plant lovers!
+                    </p>
+                    <div class="inline-flex gap-3 items-center">
+                        <img loading="lazy" src="img/r1.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
+                        <div class="flex flex-col">
+                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
+                                John Karahan
+                            </p>
+                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
+                                Gardner
+                            </p>
+                            <ul class="inline-flex">
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3 gorup">
+                    <p class="blueberry">
+                        Got a snake plant and a pothos, both thriving! Delivery was fast, and the plants were healthy. A bit more care info would be nice, but overall very happy!
+                    </p>
+                    <div class="inline-flex gap-3 items-center">
+                        <img loading="lazy" src="img/r2.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
+                        <div class="flex flex-col">
+                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
+                                Kathrian John
+                            </p>
+                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
+                                Gardner
+                            </p>
+                            <ul class="inline-flex">
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-half-sharp" class="star"></ion-icon>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3 gorup">
+                    <p class="blueberry">
+                        My go-to place for plants! Ordered succulents as a gift, and they were perfect. Great quality and variety. The website and helpful blog make plant care easy. Highly recommend!
+                    </p>
+                    <div class="inline-flex gap-3 items-center">
+                        <img loading="lazy" src="img/r3.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
+                        <div class="flex flex-col">
+                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
+                                Alex Hawk
+                            </p>
+                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
+                                Gardner
+                            </p>
+                            <ul class="inline-flex">
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-sharp" class="star"></ion-icon>
+                                </li>
+                                <li>
+                                    <ion-icon name="star-half-sharp" class="star"></ion-icon>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== End Customers Section ========== -->
+
+    <!-- ========== Start Footer ========== -->
+    <footer id="bottom"class="py-10 w-full bg-[url('img/heromain2.jpg')] bg-center bg-cover" style="background-image: url(img/heromain2.jpg);">
+        <div class="responsive flex flex-col items-center justify-center gap-8">
+            <p class="uppercase text-white text-2xl font-semibold tracking-wide">
+                contact us
+            </p>
+            <p class="text-white text-center">
+                Over there history as plants, the main uses of Plants are in cooking, making, dessert as a spread on <br /> bread , as addition to various beverages such as tea, and as a sweetener in same commercial beverages.
+            </p>
+            <div class="flex flex-row gap-5 text-3xl first:[&_ion-icon]:text-glowylw [&_ion-icon]:text-white">
+                <ion-icon class="footer-logo-icon" name="logo-facebook"></ion-icon>
+                <ion-icon class="footer-logo-icon" name="logo-twitter"></ion-icon>
+                <a href="https://www.instagram.com/premsexotics/?igsh=MXI1amNjYjNsaTRjdw%3D%3D&utm_source=qr" target="_blank">
+                    <ion-icon class="footer-logo-icon" name="logo-instagram"></ion-icon>
+                </a>
+                <ion-icon class="footer-logo-icon" name="logo-google"></ion-icon>
+            </div>
+            <div class="flex flex-row gap-10 pt-10 flex-wrap items-center justify-center">
+                <div class="inline-flex gap-3 items-center">
+                    <a href="https://www.google.com/maps?q=18.704167,73.682694" target="_blank" class="flex items-center space-x-2">
+                        <ion-icon name="location-sharp" class="text-glowylw text-2xl"></ion-icon>
+                        <p class="font-semibold text-white tracking-wide">
+                            Talegaon Dabhade, Maharashtra 410506
+                        </p>
+                    </a>
+                </div>
+                <div class="inline-flex gap-3 items-center">
+                    <a href="tel:+919146869232" class="flex items-center space-x-2">
+                        <ion-icon name="phone-portrait-sharp" class="text-glowylw text-2xl"></ion-icon>
+                        <p class="font-semibold text-white tracking-wide">+919146869232</p>
+                    </a>
+                </div>
+                <div class="inline-flex gap-3 items-center">
+                    <ion-icon name="mail-open-sharp" class="text-glowylw text-2xl"></ion-icon>
+                    <a href="mailto:premsexotics@gmail.com" class="font-semibold text-white tracking-wide">premsexotics@gmail.com</a>
+                </div>
+
+            </div>
+            <div>
+                <img loading="lazy" src="img/logofooter.png" alt="" class="object-center object-cover">
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== End Footer ========== -->
+
+    <!-- ========== Start Top BTN ========== -->
+    <a href="#top" class="top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" class="top-btn-icon"></ion-icon>
+    </a>
+
+    <!-- ========== End Top BTN ========== -->
+
+    <!-- ========== Start Script ========== -->
+    <script src="index.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ========== End Script ========== -->
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+                <!DOCTYPE html>
+                <html lang="en" class="scroll-smooth">
+
+                <head>
+
+                    <meta charset="UTF-8" />
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                    <meta name="description" content="PREMS EXOTICS" />
+                    <meta name="keywords" content="Tailwind CSS" />
+                    <meta name="author" content="Smooky Dev" />
+                    <meta name="theme-color" content="#abd373">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <title>PREMS EXOTICS</title>
+                    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+                    <link rel="stylesheet" href="dist/output.css" />
+                </head>
+
+                <body class="bg-no-repeat w-full bg-cover bg-center debug-screens">
+                    <!-- ========== Start Header ========== -->
+                    <header class="w-full header transition-all z-[80]" data-header>
+                        <div class="responsive flex items-center justify-between gap-5 py-5">
+                            <div class="lgogsite inline-flex items-center gap-2">
+                                <img loading="lazy" src="img/logo.png" alt="" class="w-24 object-center object-cover">
+                            </div>
+                            <div class="hidden lg:flex">
+                                <ul class="flex items-center justify-between gap-10 [&_li]:text-gray-900 [&_li]:tracking-normal [&_li]:font-medium [&_li]:capitalize">
+                                    <li class="linkoutline"><a href="index.html">Home</a></li>
+                                            <li class="linkoutline"><a href="#bottom">About Us</a></li>
+                                            <li class="linkoutline"><a href="plants.html">Our Shop</a></li>
+                                            <li class="linkoutline"><a href="#customer">Our Customer</a></li>
+                                            <li class="linkoutline"><a href="#bottom">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- ========== Start Mobile View ========== -->
+                                    <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]" data-nav-toggler data-nav-toggle-btn>
+                                        <span class="px-3 py-[1px] bg-cream btn11 transition-all"></span>
+                                        <span class="px-3 py-[1px] bg-cream btn22 transition-all"></span>
+                                    </div>
+
+                                    <nav class="navbar lg:hidden h-screen bg-lightgray fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]" data-navbar>
+                                        <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                                            <img loading="lazy" src="img/logofooter.png" alt="" class="w-56 object-center object-cover">
+                                        </div>
+                                        <ul class="flex flex-col items-center justify-center w-full [&_li]:font-semibold gap-8 py-20 capitalize [&_li]:text-white [&_li]:cursor-pointer">
+                                            <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                                <a href="#bottom">About Us</a>
+                                            </li>
+                                            <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                                <a href="plants.html">Our Shop</a>
+                                            </li>
+                                            <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                                <a href="#customer">Our Customer</a>
+                                            </li>
+                                            <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                                <a href="#bottom">Contact Us</a>
+                                            </li>
+                                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                                        <a href="#contact">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <div class="cartbtn flex max-w-max items-center justify-center mx-auto group mt-20">
+                                    <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
+                                    <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+                                </div>
+
+                            </nav>
+                            <div class="overlay h-screen top-0 left-0 bg-darkblue fixed z-[70] w-screen opacity-0 pointer-events-none" data-overlay data-nav-toggler></div>
+
+                            <!-- ========== End Mobile View ========== -->
+                            <div class="cartbtn group">
+                                <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
+                                <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- ========== End Header ========== -->
+
+                    <!-- ========= START PLANT LIST ========== -->
+                    <section class="Shop Feature-section">
+                        <div class="container responsive flex flex-col items-center justify-center py-10 gap-5">
+                            <p class="text-5xl text-glowylw font-semibold tracking-widest uppercase text-center">
+                                FRESH PLANTS
+                            </p>
+                            <p class="uppercase text-gray-800 text-xl font-semibold tracking-wide text-center">
+                                LETS CHECK POPULAR PRODUCTS
+                            </p>
+
+                            <div class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
+                                <div class="product card2 group box" data-name="p-1">
+                                    <img loading="lazy" src="img/Crassula Ovata.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Crassula Ovata
+                                    </p>
+                                    <p class="blueberry">
+                                        A timeless jade plant symbolizing good luck and prosperity.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹100/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-2">
+                                    <img loading="lazy" src="img/Crassula Ovata Variegated (Rare).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Crassula Ovata Variegated (Rare)
+                                    </p>
+                                    <p class="blueberry">
+                                        A charming jade plant with striking variegated leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹350/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata Variegated for ₹350/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-3">
+                                    <img loading="lazy" src="img/Dracena Moonshine.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Dracena Monshine
+                                    </p>
+                                    <p class="blueberry">
+                                        A sleek and elegant plant with silver-green foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Monshine for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-4">
+                                    <img loading="lazy" src="img/Money Plant (Black).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant (Black)
+                                    </p>
+                                    <p class="blueberry">
+                                        An exotic money plant with deep, dark leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Money Plant (black) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-5">
+                                    <img loading="lazy" src="img/Money Plant (Gold) .png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant (Gold)
+                                    </p>
+                                    <p class="blueberry">
+                                        A golden-hued money plant that brightens any space.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (gold) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-6">
+                                    <img loading="lazy" src="img/Money Plant (Green).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant (Green)
+                                    </p>
+                                    <p class="blueberry">
+                                        A classic money plant with vibrant green leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (green) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-7">
+                                    <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant Compact (Manjula)
+                                    </p>
+                                    <p class="blueberry">
+                                        A compact variety with beautiful white and green marbled leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-8">
+                                    <img loading="lazy" src="img/Money Plant Gold King.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant Gold King
+                                    </p>
+                                    <p class="blueberry">
+                                        A regal money plant with bold golden leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹100/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-9">
+                                    <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant Marble Queen
+                                    </p>
+                                    <p class="blueberry">
+                                        A stunning plant with elegant marbled foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹100/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-10">
+                                    <img loading="lazy" src="img/Money Plant N joy.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Money Plant N Joy
+                                    </p>
+                                    <p class="blueberry">
+                                        A delightful money plant with white and green variegated leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N' Joy for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-11">
+                                    <img loading="lazy" src="img/Monstera Peru.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Monstera Peru
+                                    </p>
+                                    <p class="blueberry">
+                                        An eye-catching plant with thick, textured leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹350/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Monstera Peru for ₹350/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-12">
+                                    <img loading="lazy" src="img/Oxycardium (Gold).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Oxycardium (Gold)
+                                    </p>
+                                    <p class="blueberry">
+                                        A radiant plant with golden heart-shaped leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Gold) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-13">
+                                    <img loading="lazy" src="img/Oxycardium (Green).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Oxycardium (Green)
+                                    </p>
+                                    <p class="blueberry">
+                                        A lush plant with classic green heart-shaped leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Green) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+
+                            </div>
+                                <div class="product card2 group box" data-name="p-14">
+                                    <img loading="lazy" src="img/Oxycardium Micans.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Oxycardium Micans
+                                    </p>
+                                    <p class="blueberry">
+                                        A velvety philodendron with rich, dark foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Micans for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                    <div class="product card2 group box" data-name="p-15">
+                                        <img loading="lazy" src="img/Oxycardium Variegated.png" alt="" srcset="" class="w-44 card1img" />
+                                        <p class="cardtxt">
+                                            Oxycardium Variegated
+                                        </p>
+                                        <p class="blueberry">
+                                            A vibrant plant with beautifully variegated leaves.
+                                        </p>
+                                        <div class="ordernow">
+                                            <p class="ordernow-text">
+                                                ₹75/-
+                                            </p>
+                                            <p class="btun4 butn">
+                                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Variagated for ₹75/-" target="_blank">Order Now</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                        <div class="product card2 group box" data-name="p-16">
+                                            <img loading="lazy" src="img/Pepromia Drooping Variegated.png" alt="" srcset="" class="w-44 card1img" />
+                                            <p class="cardtxt">
+                                                Pepromia Drooping Variegated
+                                            </p>
+                                            <p class="blueberry">
+                                                A unique variety with gracefully drooping variegated leaves.
+                                            </p>
+                                            <div class="ordernow">
+                                                <p class="ordernow-text">
+                                                    ₹75/-
+                                                </p>
+                                                <p class="btun4 butn">
+                                                    <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Drooping Variegated for ₹75/-" target="_blank">Order Now</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                            <div class="product card2 group box" data-name="p-17">
+                                            <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt="" srcset="" class="w-44 card1img" />
+                                            <p class="cardtxt">
+                                                Pepromia Dwarf Compact
+                                            </p>
+                                            <p class="blueberry">
+                                                A petite and charming plant with compact growth.
+                                            </p>
+                                            <div class="ordernow">
+                                                <p class="ordernow-text">
+                                                    ₹75/-
+                                                </p>
+                                                <p class="btun4 butn">
+                                                    <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Dwarf Compact for ₹75/-" target="_blank">Order Now</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                            <div class="product card2 group box" data-name="p-18">
+                                            <img loading="lazy" src="img/Pepromia Green.png" alt="" srcset="" class="w-44 card1img" />
+                                            <p class="cardtxt">
+                                                Pepromia Green
+                                            </p>
+                                            <p class="blueberry">
+                                                A versatile plant with lush, green leaves.
+                                            </p>
+                                            <div class="ordernow">
+                                                <p class="ordernow-text">
+                                                    ₹75/-
+                                                </p>
+                                                <p class="btun4 butn">
+                                                    <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green for ₹75/-" target="_blank">Order Now</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                <div class="product card2 group box" data-name="p-19">
+                                    <img loading="lazy" src="img/Pepromia Green Drooping.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Pepromia Green Drooping
+                                    </p>
+                                    <p class="blueberry">
+                                        A graceful peperomia with elegant, drooping leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green Drooping for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                    <div class="product card2 group box" data-name="p-20">
+                                        <img loading="lazy" src="img/Pepromia Obtusifolia.png" alt="" srcset="" class="w-44 card1img" />
+                                        <p class="cardtxt">
+                                            Pepromia Obtusifolia
+                                        </p>
+                                        <p class="blueberry">
+                                            A resilient plant with glossy, oval-shaped leaves.
+                                        </p>
+                                        <div class="ordernow">
+                                            <p class="ordernow-text">
+                                                ₹75/-
+                                            </p>
+                                            <p class="btun4 butn">
+                                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia for ₹75/-" target="_blank">Order Now</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                <div class="product card2 group box" data-name="p-21">
+                                    <img loading="lazy" src="img/Pepromia Obtusifolia Variegated.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Pepromia Obtusifolia Variegated
+                                    </p>
+                                    <p class="blueberry">
+                                        A striking plant with variegated foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia Variegated for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-22">
+                                    <img loading="lazy" src="img/Philodendron Burle Marx (Kerla Hybrid).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Burle Marx (Kerla Hybrid)
+                                    </p>
+                                    <p class="blueberry">
+                                        A lush hybrid with rich green leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹200/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Burle Marx (Kerla Hybrid) for ₹200/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-23">
+                                    <img loading="lazy" src="img/Philodendron Ciylon Gold.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Ciylon Gold
+                                    </p>
+                                    <p class="blueberry">
+                                        A radiant philodendron with bright golden foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Gold for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-24">
+                                    <img loading="lazy" src="img/Philodendron Ciylon Green.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Ciylon Green
+                                    </p>
+                                    <p class="blueberry">
+                                         A classic variety with deep green leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Green for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-25">
+                                    <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Ciylon Red 
+                                    </p>
+                                    <p class="blueberry">
+                                         A bold plant with striking red leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹50/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Red for ₹50/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-26">
+                                    <img loading="lazy" src="img/Philodendron Moonlight.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Moonlight
+                                    </p>
+                                    <p class="blueberry">
+                                        A vibrant philodendron with bright lime-green leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Moonlight for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-27">
+                                    <img loading="lazy" src="img/Philodendron Pariso Verde.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Pariso Verde
+                                    </p>
+                                    <p class="blueberry">
+                                        A rare beauty with unique marbled leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹250/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pariso Verde for ₹250/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-28">
+                                    <img loading="lazy" src="img/Philodendron Pink Princess.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Pink Princess
+                                    </p>
+                                    <p class="blueberry">
+                                         A regal plant with stunning pink and green foliage.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹150/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pink Process for ₹150/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-29">
+                                    <img loading="lazy" src="img/Philodendron Rojocongo.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Rojocongo
+                                    </p>
+                                    <p class="blueberry">
+                                        A dramatic philodendron with deep burgundy leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Rojocongo for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-30">
+                                    <img loading="lazy" src="img/Philodendron Xanadu Gold.png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Philodendron Xanadu Gold
+                                    </p>
+                                    <p class="blueberry">
+                                        A golden-leaved philodendron with a tropical flair.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹150/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Xanadu Gold for ₹150/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product card2 group box" data-name="p-31">
+                                    <img loading="lazy" src="img/Scindapsus Aures (Satin Pothos).png" alt="" srcset="" class="w-44 card1img" />
+                                    <p class="cardtxt">
+                                        Scindapsus Aures (Satin Pathos)
+                                    </p>
+                                    <p class="blueberry">
+                                        A luxurious pothos with velvety, silver-splashed leaves.
+                                    </p>
+                                    <div class="ordernow">
+                                        <p class="ordernow-text">
+                                            ₹75/-
+                                        </p>
+                                        <p class="btun4 butn">
+                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Scindapsus Aures (Satin Pathos) for ₹75/-" target="_blank">Order Now</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline-flex gap-5">
+                                <button class="expbtn  text-gray-900 px-8" id="load-more">
+                                       Show More
+                                        <ion-icon name="caret-forward-sharp"></ion-icon>
+                                    </button>
+                                <button class="expbtn  text-gray-900 px-8" id="show-less" style="display: none;">
+                                        Show Less
+                                        <ion-icon name="caret-forward-sharp"></ion-icon>
+                                    </button>
+                            </div>
+                    </section>
+
+
+
+                    <!-- ========== END PLANT LIST ========== -->
+
+                    <!-- ========== Start Footer ========== -->
+                    <footer id="bottom"class="py-10 w-full bg-[url('img/heromain2.jpg')] bg-center bg-cover" style="background-image: url(img/heromain2.jpg);">
+                        <div class="responsive flex flex-col items-center justify-center gap-8">
+                            <p class="uppercase text-white text-2xl font-semibold tracking-wide">
+                                contact us
+                            </p>
+                            <p class="text-white text-center">
+                                Over its history as a food, the main uses of Plant are in cooking, making, dessert as a spread on <br /> bread , as addition to various beverages such as tea, and as a sweetener in same commercial beverages.
+                            </p>
+                            <div class="flex flex-row gap-5 text-3xl first:[&_ion-icon]:text-glowylw [&_ion-icon]:text-white">
+                                <ion-icon class="footer-logo-icon" name="logo-facebook"></ion-icon>
+                                <ion-icon class="footer-logo-icon" name="logo-twitter"></ion-icon>
+                                <ion-icon class="footer-logo-icon" name="logo-instagram"></ion-icon>
+                                <ion-icon class="footer-logo-icon" name="logo-google"></ion-icon>
+                            </div>
+                            <div class="flex flex-row gap-10 pt-10 flex-wrap items-center justify-center">
+                                <div class="inline-flex gap-3 items-center">
+                                    <ion-icon name="location-sharp" class="text-glowylw text-2xl"></ion-icon>
+                                    <p class="font-semibold text-white tracking-wide">
+                                        Main Street 78,New York
+                                    </p>
+                                </div>
+                                <div class="inline-flex gap-3 items-center">
+                                    <ion-icon name="phone-portrait-sharp" class="text-glowylw text-2xl"></ion-icon>
+                                    <p class="font-semibold text-white tracking-wide">0975575348</p>
+                                </div>
+                                <div class="inline-flex gap-3 items-center">
+                                    <ion-icon name="mail-open-sharp" class="text-glowylw text-2xl"></ion-icon>
+                                    <a href="mailto:premsexotics@gmail.com" class="font-semibold text-white tracking-wide">premsexotics@gmail.com</a>
+                                </div>
+
+                            </div>
+                            <div>
+                                <img loading="lazy" src="img/logofooter.png" alt="" class="object-center object-cover">
+                            </div>
+                        </div>
+                    </footer>
+
+                    <!-- ========== End Footer ========== -->
+
+                    <!-- ========== Start Top BTN ========== -->
+                    <a href="#top" class="top-btn" aria-label="back to top" data-back-top-btn>
+                        <ion-icon name="chevron-up" class="top-btn-icon"></ion-icon>
+                    </a>
+
+                    <!-- ========== End Top BTN ========== -->
+
+                    <!-- ========== Start Script ========== -->
+                     <script src="index.js"></script>
+
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    <!-- ========== End Script ========== -->
+                </body>
+
+                </html>
