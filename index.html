@@ -13,6 +13,23 @@
     <title>PREMS EXOTICS</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #9CCD62;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #9CCD62;
+        }
+
+    </style>
 </head>
 
 <body class="bg-no-repeat w-full bg-cover bg-center debug-screens">
@@ -58,18 +75,16 @@
                         <a href="#bottom">Contact Us</a>
                     </li>
                 </ul>
-                <div class="cartbtn flex max-w-max items-center justify-center mx-auto group mt-20">
-                    <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
-                    <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
-                </div>
-
             </nav>
             <div class="overlay h-screen top-0 left-0 bg-darkblue fixed z-[70] w-screen opacity-0 pointer-events-none" data-overlay data-nav-toggler></div>
 
             <!-- ========== End Mobile View ========== -->
-            <div class="cartbtn group">
-                <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
-                <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+            <div class="search-container">
+                <div class="search-bar">
+                    <a href="plants.html">
+                        <button id="search-icon"><ion-icon name="search-sharp"></ion-icon></button>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -108,8 +123,8 @@
             </p>
 
             <div class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
-                <div class="product card2 group box" data-name="p-1">
-                    <img loading="lazy" src="img/Money Plant N joy.png" alt="" srcset="" class="w-44 card1img" />
+                <div class="product card2 group box" data-name="p-1 Crassula Ovata">
+                    <img loading="lazy" src="img/Money Plant N joy.png" alt="Crassula Ovata" srcset="" class="w-44 card1img" />
                     <p class="cardtxt">
                         Money Plant N' Joy
                     </p>
@@ -182,74 +197,7 @@
                     <a href="plants.html">Show More</a>
                         <ion-icon name="caret-forward-sharp"></ion-icon>
                     </button>
-            <div class="products-preview">
-
-                <div class="preview " data-target="p-1">
-                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
-                    <img src="img/1.png" alt="" class="pop-card-image">
-                    <h3 class="text-2xl font-bold text-lightgreen">Money Plant N' Joy</h3>
-                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
-                        The Money Plant N' Joy is a beautiful and easy-to-care-for houseplant known for its stunning variegated green and white leaves. Thriving in low to bright indirect light and requiring minimal watering, this plant is perfect for both beginners and seasoned plant enthusiasts. Its cascading foliage makes it a wonderful choice for hanging baskets, shelves, or tabletops, adding a touch of natural elegance to any indoor space.
-                    </p>
-                    <div class="ordernow">
-                        <p class="ordernow-text text-2xl md:text-4xl">
-                            ₹75/-
-                        </p>
-                        <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Money Plant N' Joy Plant for ₹75/-" target="_blank">Order Now</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="preview " data-target="p-2">
-                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
-                    <img src="img/2.png" alt="" class="pop-card-image">
-                    <h3 class="text-2xl font-bold text-lightgreen">Money Plant Compact (Manjula)</h3>
-                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
-                        The Money Plant Compact (Manjula) is a stunning houseplant known for its heart-shaped leaves with unique white and green variegation. This easy-to-care-for plant thrives in low to bright indirect light and requires minimal watering, making it ideal for both novice and experienced plant enthusiasts. Its compact size and lush foliage make it a perfect choice for desktops, shelves, or small spaces, bringing a touch of elegance and charm to any room.
-                    </p>
-                    <div class="ordernow">
-                        <p class="ordernow-text text-2xl md:text-4xl">
-                            ₹75/-
-                        </p>
-                        <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Money Plant Compact (Manjula) for ₹75/-" target="_blank">Order Now</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="preview " data-target="p-3">
-                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
-                    <img src="img/3.png" alt="" class="pop-card-image">
-                    <h3 class="text-2xl font-bold text-lightgreen">Aloe Juvenna</h3>
-                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
-                        The Aloe Juvenna Plant, often called the "Tiger Tooth Aloe," is a delightful succulent known for its compact rosette shape and spiky, toothed leaves. These leaves are bright green with charming white spots, giving the plant a playful and unique appearance. Easy to care for, Aloe Juvenna thrives in bright, indirect light and requires minimal watering, making it an ideal choice for both beginners and experienced plant enthusiasts. Perfect for small spaces, windowsills, or as part of a succulent arrangement, this hardy plant adds a touch of vibrant greenery to any setting.
-                    </p>
-                    <div class="ordernow">
-                        <p class="ordernow-text text-2xl md:text-4xl">
-                            ₹349/-
-                        </p>
-                        <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Aloe Juvenn for ₹349/-" target="_blank">Order Now</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="preview " data-target="p-4">
-                    <ion-icon name="add-sharp" class="pop-card"></ion-icon>
-                    <img src="img/4.png" alt="" class="pop-card-image">
-                    <h3 class="text-2xl font-bold text-lightgreen">Aloe Blizzard</h3>
-                    <p class="md:text-lg font-semibold text-gray-500 text-justify">
-                        The Aloe Blizzard Plant is a beautiful succulent with striking green and white leaves that look like a winter blizzard. Easy to care for, it thrives in bright, indirect light and only needs a little water, making it perfect for both beginners and experienced plant lovers. Whether you keep it indoors or in a warm outdoor spot, this charming plant adds a touch of natural beauty to any space.
-                    </p>
-                    <div class="ordernow">
-                        <p class="ordernow-text text-2xl md:text-4xl">
-                            ₹349/-
-                        </p>
-                        <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Aralia Variegated Mini Plant for ₹236/-" target="_blank">Order Now</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-    </section>
+            </section>
 
 
     <!-- ========== End Shop Feature Section ========== -->
@@ -277,7 +225,7 @@
                 <p class="cardtxt">
                     Payment Secure
                 </p>
-                <p class="blueberry">Free shipping on order</p>
+                <p class="blueberry">Shipping all over India</p>
             </div>
         </div>
     </section>
@@ -301,13 +249,6 @@
                 <div class="inline-flex gap-5">
                     <button class="expbtn"> 
                         <a href="plants.html">Explore the shop</a>
-
-
-
-
-
-
-                        
                         <ion-icon name="caret-forward-sharp"></ion-icon>
                     </button>
                 </div>
@@ -335,122 +276,7 @@
     </section>
 
     <!-- ========== End Tips Section ========== -->
-
-    <!-- ========== Start Customers Section ========== -->
-    <section class="Customers-section" id="customer">
-        <div class="responsive flex flex-col items-center justify-center py-10 gap-5">
-            <p class="text-5xl text-glowylw font-semibold tracking-widest uppercase text-center">
-                OUR CUSTOMERS
-            </p>
-            <p class="uppercase text-gray-800 text-xl font-semibold tracking-wide text-center">
-                CLIENT REVIEW ABOUT OUR PRODUCT
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 py-10">
-                <div class="card3 gorup">
-                    <p class="blueberry">
-                        I bought a fiddle leaf fig, and it's perfect! Arrived in great condition with clear care instructions. The customer service was fantastic. Highly recommend for plant lovers!
-                    </p>
-                    <div class="inline-flex gap-3 items-center">
-                        <img loading="lazy" src="img/r1.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
-                        <div class="flex flex-col">
-                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
-                                John Karahan
-                            </p>
-                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
-                                Gardner
-                            </p>
-                            <ul class="inline-flex">
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card3 gorup">
-                    <p class="blueberry">
-                        Got a snake plant and a pothos, both thriving! Delivery was fast, and the plants were healthy. A bit more care info would be nice, but overall very happy!
-                    </p>
-                    <div class="inline-flex gap-3 items-center">
-                        <img loading="lazy" src="img/r2.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
-                        <div class="flex flex-col">
-                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
-                                Kathrian John
-                            </p>
-                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
-                                Gardner
-                            </p>
-                            <ul class="inline-flex">
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-half-sharp" class="star"></ion-icon>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card3 gorup">
-                    <p class="blueberry">
-                        My go-to place for plants! Ordered succulents as a gift, and they were perfect. Great quality and variety. The website and helpful blog make plant care easy. Highly recommend!
-                    </p>
-                    <div class="inline-flex gap-3 items-center">
-                        <img loading="lazy" src="img/r3.jpg" alt="" class="rounded-full aspect-square object-cover object-center" />
-                        <div class="flex flex-col">
-                            <p class="text-gray-800 font-semibold group-hover:text-gray-600">
-                                Alex Hawk
-                            </p>
-                            <p class="text-gray-400 text-xs font-semibold group-hover:text-gray-600">
-                                Gardner
-                            </p>
-                            <ul class="inline-flex">
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-sharp" class="star"></ion-icon>
-                                </li>
-                                <li>
-                                    <ion-icon name="star-half-sharp" class="star"></ion-icon>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== End Customers Section ========== -->
-
+                
     <!-- ========== Start Footer ========== -->
     <footer id="bottom"class="py-10 w-full bg-[url('img/heromain2.jpg')] bg-center bg-cover" style="background-image: url(img/heromain2.jpg);">
         <div class="responsive flex flex-col items-center justify-center gap-8">
@@ -505,6 +331,7 @@
     <!-- ========== End Top BTN ========== -->
 
     <!-- ========== Start Script ========== -->
+                
     <script src="index.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
