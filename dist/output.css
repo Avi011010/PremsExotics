@@ -1040,7 +1040,7 @@ video {
   font-weight: 600;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(22 22 23 / var(--tw-text-opacity));
 }
 
 .group:hover .cardtxt {
