@@ -1,4 +1,4 @@
-        "use strict";
+"use strict";
 
         /**
          * PRELOADER
@@ -30,7 +30,6 @@ window.addEventListener("scroll", function() {
         topBtn.classList.remove("active");
     }
 });
-
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
@@ -56,63 +55,112 @@ AddEventonElem(Navlinks, "click", ClosetoggleNavbar);
 
 // Load More & Show Less for Galler
 
-let loadMoreBtn = document.querySelector('#load-more');
-let showLessBtn = document.querySelector('#show-less');
-let currentItem = 4;
+document.addEventListener('DOMContentLoaded', () => {
+    let loadMoreBtn = document.querySelector('#load-more');
+    let showLessBtn = document.querySelector('#show-less');
+    let currentItem = 4;
 
-loadMoreBtn.onclick = () => {
-    let boxes = [...document.querySelectorAll('.container .box-container .box')];
-    for (let i = currentItem; i < boxes.length; i++) {
-        if (boxes[i]) {
-            boxes[i].style.display = 'flex';
-            boxes[i].classList.add('visible');
+    loadMoreBtn.onclick = () => {
+        let boxes = [...document.querySelectorAll('.container .box-container .box')];
+        for (let i = currentItem; i < boxes.length; i++) {
+            if (boxes[i]) {
+                boxes[i].style.display = 'flex';
+                boxes[i].classList.add('visible');
+            }
         }
+        currentItem = boxes.length; // Update currentItem to total number of boxes
+
+        loadMoreBtn.style.display = 'none'; // Hide the "Show More" button after click
+        showLessBtn.style.display = 'flex'; // Ensure "Show Less" button is visible
     }
-    currentItem = boxes.length; // Update currentItem to total number of boxes
 
-    loadMoreBtn.style.display = 'none'; // Hide the "Show More" button after click
-    showLessBtn.style.display = 'flex'; // Ensure "Show Less" button is visible
-}
-
-showLessBtn.onclick = () => {
-    let boxes = [...document.querySelectorAll('.container .box-container .box')];
-    for (let i = 4; i < boxes.length; i++) {
-        if (boxes[i]) {
-            boxes[i].style.display = 'none';
-            boxes[i].classList.remove('visible');
+    showLessBtn.onclick = () => {
+        let boxes = [...document.querySelectorAll('.container .box-container .box')];
+        for (let i = 4; i < boxes.length; i++) {
+            if (boxes[i]) {
+                boxes[i].style.display = 'none';
+                boxes[i].classList.remove('visible');
+            }
         }
+        currentItem = 4; // Reset currentItem to initial value
+
+        showLessBtn.style.display = 'none'; // Hide "Show Less" if only 4 items are visible
+        loadMoreBtn.style.display = 'flex'; // Show the "Show More" button again
     }
-    currentItem = 4; // Reset currentItem to initial value
+});
+// zoom in and zoom out products
+document.addEventListener('DOMContentLoaded', () => {
+    let loadMoreBtn = document.querySelector('#load-more');
+    let showLessBtn = document.querySelector('#show-less');
+    let currentItem = 4;
 
-    showLessBtn.style.display = 'none'; // Hide "Show Less" if only 4 items are visible
-    loadMoreBtn.style.display = 'flex'; // Show the "Show More" button again
-}
+    loadMoreBtn.onclick = () => {
+        let boxes = [...document.querySelectorAll('.container .box-container .box')];
+        for (let i = currentItem; i < boxes.length; i++) {
+            if (boxes[i]) {
+                boxes[i].style.display = 'flex';
+                boxes[i].classList.add('visible');
+            }
+        }
+        currentItem = boxes.length; // Update currentItem to total number of boxes
 
+        loadMoreBtn.style.display = 'none'; // Hide the "Show More" button after click
+        showLessBtn.style.display = 'flex'; // Ensure "Show Less" button is visible
+    }
 
-        // POP Card
+    showLessBtn.onclick = () => {
+        let boxes = [...document.querySelectorAll('.container .box-container .box')];
+        for (let i = 4; i < boxes.length; i++) {
+            if (boxes[i]) {
+                boxes[i].style.display = 'none';
+                boxes[i].classList.remove('visible');
+            }
+        }
+        currentItem = 4; // Reset currentItem to initial value
 
-        let preveiwContainer = document.querySelector('.products-preview');
-        let previewBox = preveiwContainer.querySelectorAll('.preview');
+        showLessBtn.style.display = 'none'; // Hide "Show Less" if only 4 items are visible
+        loadMoreBtn.style.display = 'flex'; // Show the "Show More" button again
+    }
 
-        document.querySelectorAll('.products-container .product').forEach(product => {
-            product.onclick = () => {
-                preveiwContainer.style.display = 'flex';
-                let name = product.getAttribute('data-name');
-                previewBox.forEach(preview => {
-                    let target = preview.getAttribute('data-target');
-                    if (name == target) {
-                        preview.classList.add('active');
-                    }
-                });
-            };
+    // Close the zoomed image when clicking outside of it
+    document.querySelectorAll('.zoomed-image').forEach(zoomedImage => {
+        zoomedImage.addEventListener('click', (e) => {
+            if (e.target === zoomedImage) {
+                zoomedImage.closest('details').removeAttribute('open');
+            }
         });
+    });
+});
 
-        previewBox.forEach(close => {
-            close.querySelector('.pop-card').onclick = () => {
-                close.classList.remove('active');
-                preveiwContainer.style.display = 'none';
-            };
-        });
+// search bar
+document.getElementById('search-icon').onclick = function() {
+    var searchInput = document.getElementById('search-input');
+    if (searchInput.style.display === 'none' || searchInput.style.width === '0px') {
+        searchInput.style.display = 'block';
+        setTimeout(function() {
+            searchInput.style.width = '150px'; // Adjust width as needed
+        }, 10); // Small delay to trigger transition
+    } else {
+        searchInput.style.width = '0';
+        setTimeout(function() {
+            searchInput.style.display = 'none';
+        }, 300); // Matches the transition duration
+    }
+};
+
+// Add search functionality
+document.getElementById('search-input').oninput = function() {
+    var filter = this.value.toLowerCase();
+    var products = document.querySelectorAll('.product');
+    products.forEach(function(product) {
+        var name = product.getAttribute('data-name').toLowerCase();
+        if (name.includes(filter)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+};
        
         /**
          * SCROLL REVEAL
