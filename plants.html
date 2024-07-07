@@ -31,6 +31,20 @@
             box-shadow: 0 0 10px #9CCD62;
         }
 
+        .cart-count-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -42,54 +56,63 @@
                 <img loading="lazy" src="img/logo.png" alt="" class="w-24 object-center object-cover">
             </div>
             <div class="hidden lg:flex">
-                <ul class="flex items-center justify-between gap-10 [&_li]:text-gray-900 [&_li]:tracking-normal [&_li]:font-medium [&_li]:capitalize">
+                <ul
+                    class="flex items-center justify-between gap-10 [&_li]:text-gray-900 [&_li]:tracking-normal [&_li]:font-medium [&_li]:capitalize">
                     <li class="linkoutline"><a href="index.html">Home</a></li>
-                            <li class="linkoutline"><a href="#bottom">About Us</a></li>
-                            <li class="linkoutline"><a href="plants.html">Our Shop</a></li>
-                            <li class="linkoutline"><a href="#customer">Our Customer</a></li>
-                            <li class="linkoutline"><a href="#bottom">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <!-- ========== Start Mobile View ========== -->
-                    <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]" data-nav-toggler data-nav-toggle-btn>
-                        <span class="px-3 py-[1px] bg-cream btn11 transition-all"></span>
-                        <span class="px-3 py-[1px] bg-cream btn22 transition-all"></span>
-                    </div>
-
-                    <nav class="navbar lg:hidden h-screen bg-lightgray fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]" data-navbar>
-                        <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
-                            <img loading="lazy" src="img/logofooter.png" alt="" class="w-56 object-center object-cover">
-                        </div>
-                        <ul class="flex flex-col items-center justify-center w-full [&_li]:font-semibold gap-8 py-20 capitalize [&_li]:text-white [&_li]:cursor-pointer">
-                            <li class="linkoutline hover:text-glowylw" data-nav-links>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li class="linkoutline hover:text-glowylw" data-nav-links>
-                                <a href="#bottom">About Us</a>
-                            </li>
-                            <li class="linkoutline hover:text-glowylw" data-nav-links>
-                                <a href="plants.html">Our Shop</a>
-                            </li>
-                            <li class="linkoutline hover:text-glowylw" data-nav-links>
-                                <a href="#customer">Our Customer</a>
-                            </li>
-                            <li class="linkoutline hover:text-glowylw" data-nav-links>
-                                <a href="#bottom">Contact Us</a>
-                            </li>
+                    <li class="linkoutline"><a href="#bottom">About Us</a></li>
+                    <li class="linkoutline"><a href="plants.html">Our Shop</a></li>
+                    <li class="linkoutline"><a href="#customer">Our Customer</a></li>
+                    <li class="linkoutline"><a href="#bottom">Contact Us</a></li>
                 </ul>
-                <div class="cartbtn flex max-w-max items-center justify-center mx-auto group mt-20">
-                    <ion-icon class="cartbtnitem" name="search-sharp"></ion-icon>
-                    <ion-icon class="cartbtnitem" name="cart-sharp"></ion-icon>
+            </div>
+            <!-- ========== Start Mobile View ========== -->
+            <div class="nav-toggle-btn lg:hidden h-14 w-14 bg-transparent rounded-full flex flex-col gap-2 items-center justify-center z-[90]"
+                data-nav-toggler data-nav-toggle-btn>
+                <span class="px-3 py-[1px] bg-cream btn11 transition-all"></span>
+                <span class="px-3 py-[1px] bg-cream btn22 transition-all"></span>
+            </div>
+
+            <nav class="navbar lg:hidden h-screen bg-lightgray fixed top-0 -right-[400px] max-w-[400px] w-full z-[80]"
+                data-navbar>
+                <div class="Logo_here inline-flex items-center justify-center gap-2 pt-20">
+                    <img loading="lazy" src="img/logofooter.png" alt="" class="w-56 object-center object-cover">
                 </div>
+                <ul
+                    class="flex flex-col items-center justify-center w-full [&_li]:font-semibold gap-8 py-20 capitalize [&_li]:text-white [&_li]:cursor-pointer">
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#bottom">About Us</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="plants.html">Our Shop</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#customer">Our Customer</a>
+                    </li>
+                    <li class="linkoutline hover:text-glowylw" data-nav-links>
+                        <a href="#bottom">Contact Us</a>
+                    </li>
+                </ul>
 
             </nav>
-            <div class="overlay h-screen top-0 left-0 bg-darkblue fixed z-[70] w-screen opacity-0 pointer-events-none" data-overlay data-nav-toggler></div>
+            <div class="overlay h-screen top-0 left-0 bg-darkblue fixed z-[70] w-screen opacity-0 pointer-events-none"
+                data-overlay data-nav-toggler></div>
 
             <!-- ========== End Mobile View ========== -->
             <div class="search-container">
                 <div class="search-bar">
                     <button id="search-icon"><ion-icon name="search-sharp"></ion-icon></button>
-                    <input type="text" id="search-input" placeholder="Search..." style=" padding: 5px; border-radius: 10px; transition: width 0.3s ease; width: 0; display: none; color: #000000; background-color: #9CCD62;">
+                    <input type="text" id="search-input" placeholder="Search..."
+                        style=" padding: 5px; border-radius: 10px; transition: width 0.3s ease; display: none; color: #000000; background-color: #9CCD62;">
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="search-bar">
+                    <a href="cart.html" class="relative"> <button id="cart-icon"><ion-icon
+                                name="cart-sharp"></ion-icon></button>
+                        <span id="cart-count" class="cart-count-badge"></span></a>
                 </div>
             </div>
         </div>
@@ -107,24 +130,44 @@
                 LETS CHECK POPULAR PRODUCTS
             </p>
 
-            <div class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
+            <div
+                class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
                 <details class="product card2 group box" data-name="Crassula Ovata p-1">
-                    <summary class="product-summary">
-                        <img loading="lazy" src="img/Crassula Ovata.png" alt="Crassula Ovata" class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                    <summary class="product-summary" data-name="Product 1" data-price="100">
+                        <img loading="lazy" src="img/Crassula Ovata.png" alt="Crassula Ovata"
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt product-name">
                             Crassula Ovata
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹100/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                            margin-top: 25px;
-                            text-align: center;
-                            padding: 4px 8px; /* Adjust padding for smaller screens */
-                            font-size: 10px; /* Adjust font size for smaller screens */
-                          }}">Order Now</a>
-                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Crassula-Ovata"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Product-1" class="product-quantity" value="1" min="1"
+                                    style="margin-left: 5px; width: 40px;">
+                            </label>
+
+                            <p class="hover" style="margin-top: -5px;">
+                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-"
+                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 15px; color: white; border-radius: 30px; margin-left: 28px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order Now</a>
+                                <button class="add-to-cart-btn hover" data-product-name="Product 1"
+                                    data-product-price="100" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                    margin-top: 25px;
+                                    text-align: center;
+                                    padding: 1px 5px; /* Adjust padding for smaller screens */
+                                    font-size: 5px; /* Adjust font size for smaller screens */
+                                    }">Add to Cart</button>
+                            </p>
+                        </div>
+
                     </summary>
                     <div class="zoomed-image" id="crassula-ovata">
                         <img loading="lazy" src="img/Crassula Ovata.png" alt="Crassula Ovata" />
@@ -140,30 +183,66 @@
                             ₹100/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-" target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-"
+                                target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
                 <details class="product card2 group box" data-name="Crassula Ovata Variegated (Rare) p-2">
-                    <summary class="product-summary">
-                        <img loading="lazy" src="img/Crassula Ovata Variegated (Rare).png" alt="" class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                    <summary class="product-summary" data-name="Product 2" data-price="350">
+                        <img loading="lazy" src="img/Crassula Ovata Variegated (Rare).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt product-name">
                             Crassula Ovata Variegated (Rare)
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹350/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata (Rare) for ₹350/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                            margin-top: 25px;
-                            text-align: center;
-                            padding: 4px 8px; /* Adjust padding for smaller screens */
-                            font-size: 10px; /* Adjust font size for smaller screens */
-                          }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Crassula-Ovata-Variegated-Rare"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Crassula-Ovata-Variegated-Rare"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata (Rare) for ₹350/-"
+                                    target="_blank"
+                                    style="
+                                        padding: 1px 5px;
+                                        background-color: #4caf50;
+                                        font-size: 15px;
+                                        color: white;
+                                        border-radius: 30px;
+                                        margin-left: 28px;
+                                        transition: background-color 0.3s ease;
+                                        @media screen and (max-width: 768px) {
+                                            margin-top: 25px;
+                                            text-align: center;
+                                            padding: 4px 8px; /* Adjust padding for smaller screens */
+                                            font-size: 5px; /* Adjust font size for smaller screens */
+                                        }
+                                    ">Order
+                                    Now</a>
+                                <button class="add-to-cart-btn" data-product-name="Crassula Ovata Variegated (Rare)"
+                                    data-product-price="350"
+                                    style="
+                                        padding: 1px 5px;
+                                        background-color: #4caf50;
+                                        font-size: 14px;
+                                        color: white;
+                                        border-radius: 30px;
+                                        margin-left: 28px;
+                                        margin-top: 10px;
+                                        transition: background-color 0.3s ease;
+                                        @media screen and (max-width: 768px) {
+                                            margin-top: 25px;
+                                            text-align: center;
+                                            padding: 1px 5px; /* Adjust padding for smaller screens */
+                                            font-size: 5px; /* Adjust font size for smaller screens */
+                                        }
+                                    ">Add
+                                    to Cart</button>
+                        </div>
                     </summary>
                     <div class="zoomed-image" id="crassula-ovata-variegated">
                         <img loading="lazy" src="img/Crassula Ovata Variegated (Rare).png" alt="" />
@@ -179,13 +258,16 @@
                             ₹350/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata (Rare) for ₹350/-" target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata Variegated (Rare) for ₹350/-"
+                                target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
+
                 <details class="product card2 group box" data-name="Dracena Moonshine p-3">
                     <summary class="product-summary">
-                        <img loading="lazy" src="img/Dracena Moonshine.png" alt="" class="w-44 card1img product-image" />
+                        <img loading="lazy" src="img/Dracena Moonshine.png" alt=""
+                            class="w-44 card1img product-image" />
                         <p class="cardtxt">
                             Dracena Moonshine
                         </p>
@@ -193,7 +275,8 @@
                             ₹75/-
                         </p>
                         <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                             margin-top: 25px;
                             text-align: center;
                             padding: 4px 8px; /* Adjust padding for smaller screens */
@@ -218,13 +301,15 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-" target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
+                                target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
                 <details class="product card2 group box" data-name="Money Plant (Black) p-4">
                     <summary class="product-summary">
-                        <img loading="lazy" src="img/Money Plant (Black).png" alt="" class="w-44 card1img product-image" />
+                        <img loading="lazy" src="img/Money Plant (Black).png" alt=""
+                            class="w-44 card1img product-image" />
                         <p class="cardtxt">
                             Money Plant (Black)
                         </p>
@@ -232,7 +317,8 @@
                             ₹75/-
                         </p>
                         <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                             margin-top: 25px;
                             text-align: center;
                             padding: 4px 8px; /* Adjust padding for smaller screens */
@@ -255,1107 +341,1187 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-" target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                                target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant (Gold) p-5">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant (Gold) .png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant (Gold)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant (Gold) .png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant (Gold)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant (Gold) .png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant (Gold)
-                </p>
-                <p class="blueberry">
-                A golden-hued money plant that brightens any space.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant (Gold) .png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant (Gold)
+                    </p>
+                    <p class="blueberry">
+                        A golden-hued money plant that brightens any space.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant (Green) p-6">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant (Green).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant (Green)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant (Green).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant (Green)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant (Green).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant (Green)
-                </p>
-                <p class="blueberry">
-                A classic money plant with vibrant green leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant (Green).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant (Green)
+                    </p>
+                    <p class="blueberry">
+                        A classic money plant with vibrant green leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Compact (Manjula) p-7">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant Compact (Manjula)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant Compact (Manjula)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant Compact (Manjula)
-                </p>
-                <p class="blueberry">
-                A compact variety with beautiful white and green marbled leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant Compact (Manjula)
+                    </p>
+                    <p class="blueberry">
+                        A compact variety with beautiful white and green marbled leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Gold King p-8">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant Gold King.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant Gold King
-                </p>
-                <p class="ordernow-text">
-                ₹100/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant Gold King.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant Gold King
+                        </p>
+                        <p class="ordernow-text">
+                            ₹100/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant Gold King.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant Gold King
-                </p>
-                <p class="blueberry">
-                A regal money plant with bold golden leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹100/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant Gold King.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant Gold King
+                    </p>
+                    <p class="blueberry">
+                        A regal money plant with bold golden leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹100/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Marble Queen p-9">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant Marble Queen
-                </p>
-                <p class="ordernow-text">
-                ₹100/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant Marble Queen.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant Marble Queen
+                        </p>
+                        <p class="ordernow-text">
+                            ₹100/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant Marble Queen
-                </p>
-                <p class="blueberry">
-                A stunning plant with elegant marbled foliage.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹100/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant Marble Queen
+                    </p>
+                    <p class="blueberry">
+                        A stunning plant with elegant marbled foliage.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹100/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant N Joy p-10">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Money Plant N joy.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Money Plant N Joy
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Money Plant N joy.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Money Plant N Joy
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Money Plant N joy.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Money Plant N Joy
-                </p>
-                <p class="blueberry">
-                A delightful money plant with white and green variegated leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Money Plant N joy.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Money Plant N Joy
+                    </p>
+                    <p class="blueberry">
+                        A delightful money plant with white and green variegated leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Monstera Peru p-11">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Monstera Peru.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Monstera Peru
-                </p>
-                <p class="ordernow-text">
-                ₹350/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Monstera Peru for ₹350/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Monstera Peru.png" alt="" class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Monstera Peru
+                        </p>
+                        <p class="ordernow-text">
+                            ₹350/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Monstera Peru for ₹350/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Monstera Peru.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Monstera Peru
-                </p>
-                <p class="blueberry">
-                An eye-catching plant with thick, textured leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹350/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Monstera Peru for ₹350/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Monstera Peru.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Monstera Peru
+                    </p>
+                    <p class="blueberry">
+                        An eye-catching plant with thick, textured leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹350/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Monstera Peru for ₹350/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Oxycardium (Gold) p-12">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Oxycardium (Gold).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Oxycardium (Gold)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Gold) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Oxycardium (Gold).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Oxycardium (Gold)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Gold) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Oxycardium (Gold).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Oxycardium (Gold)
-                </p>
-                <p class="blueberry">
-                A radiant plant with golden heart-shaped leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Gold) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Oxycardium (Gold).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Oxycardium (Gold)
+                    </p>
+                    <p class="blueberry">
+                        A radiant plant with golden heart-shaped leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Gold) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Oxycardium (Green) p-13">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Oxycardium (Green).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Oxycardium (Green)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Green) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Oxycardium (Green).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Oxycardium (Green)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Green) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Oxycardium (Green).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Oxycardium (Green)
-                </p>
-                <p class="blueberry">
-                A lush plant with classic green heart-shaped leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Green) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Oxycardium (Green).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Oxycardium (Green)
+                    </p>
+                    <p class="blueberry">
+                        A lush plant with classic green heart-shaped leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium (Green) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Oxycardium (Micans) p-14">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Oxycardium Micans.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Oxycardium Micans
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Micans for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Oxycardium Micans.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Oxycardium Micans
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Micans for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Oxycardium Micans.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Oxycardium Micans
-                </p>
-                <p class="blueberry">
-                A velvety philodendron with rich, dark foliage.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Micans for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Oxycardium Micans.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Oxycardium Micans
+                    </p>
+                    <p class="blueberry">
+                        A velvety philodendron with rich, dark foliage.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Micans for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Oxycardium Variegated p-15">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Oxycardium Variegated.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Oxycardium Variegated
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Variegated for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Oxycardium Variegated.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Oxycardium Variegated
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Variegated for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Oxycardium Variegated.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Oxycardium Variegated
-                </p>
-                <p class="blueberry">
-                A vibrant plant with beautifully variegated leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Variegated for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Oxycardium Variegated.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Oxycardium Variegated
+                    </p>
+                    <p class="blueberry">
+                        A vibrant plant with beautifully variegated leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Oxycardium Variegated for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Pepromia Drooping Variegated p-16">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Drooping Variegated.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Drooping Variegated
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Drooping Variegated for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Drooping Variegated.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Drooping Variegated
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Drooping Variegated for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Drooping Variegated.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Drooping Variegated
-                </p>
-                <p class="blueberry">
-                A unique variety with gracefully drooping variegated leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Drooping Variegated for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Drooping Variegated.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Drooping Variegated
+                    </p>
+                    <p class="blueberry">
+                        A unique variety with gracefully drooping variegated leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Drooping Variegated for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Pepromia Dwarf Compact p-17">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Dwarf Compact
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Dwarf Compact
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Dwarf Compact
-                </p>
-                <p class="blueberry">
-                A petite and charming plant with compact growth.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Dwarf Compact for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Dwarf Compact.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Dwarf Compact
+                    </p>
+                    <p class="blueberry">
+                        A petite and charming plant with compact growth.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Dwarf Compact for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Pepromia Green p-18">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Green.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Green
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Green.png" alt="" class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Green
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Green.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Green
-                </p>
-                <p class="blueberry">
-                A versatile plant with lush, green leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Green.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Green
+                    </p>
+                    <p class="blueberry">
+                        A versatile plant with lush, green leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Pepromia Green Drooping p-19">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Green Drooping.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Green Drooping
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green Drooping for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Green Drooping.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Green Drooping
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green Drooping for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Green Drooping.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Green Drooping
-                </p>
-                <p class="blueberry">
-                A graceful pepromia with elegant, drooping leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green Drooping for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Green Drooping.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Green Drooping
+                    </p>
+                    <p class="blueberry">
+                        A graceful pepromia with elegant, drooping leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Green Drooping for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Pepromia Obtusifolia p-20">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Obtusifolia.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Obtusifolia
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Obtusifolia.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Obtusifolia
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Obtusifolia.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Obtusifolia
-                </p>
-                <p class="blueberry">
-                A resilient plant with glossy, oval-shaped leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Obtusifolia.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Obtusifolia
+                    </p>
+                    <p class="blueberry">
+                        A resilient plant with glossy, oval-shaped leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Pepromia Obtusifolia Variegated p-21">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Pepromia Obtusifolia Variegated.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Pepromia Obtusifolia Variegated
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia Variegated for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Pepromia Obtusifolia Variegated.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Pepromia Obtusifolia Variegated
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia Variegated for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Pepromia Obtusifolia Variegated.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Pepromia Obtusifolia Variegated
-                </p>
-                <p class="blueberry">
-                A striking plant with variegated foliage.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia Variegated for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Pepromia Obtusifolia Variegated.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Pepromia Obtusifolia Variegated
+                    </p>
+                    <p class="blueberry">
+                        A striking plant with variegated foliage.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Pepromia Obtusifolia Variegated for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Burle Marx (Kerla Hybrid) p-22">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Burle Marx (Kerla Hybrid).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Burle Marx (Kerla Hybrid)
-                </p>
-                <p class="ordernow-text">
-                ₹200/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Burle Marx (Kerla Hybrid) for ₹200/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Burle Marx (Kerla Hybrid).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Burle Marx (Kerla Hybrid)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹200/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Burle Marx (Kerla Hybrid) for ₹200/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Burle Marx (Kerla Hybrid).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Burle Marx (Kerla Hybrid)
-                </p>
-                <p class="blueberry">
-                A lush hybrid with rice green leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹200/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Burle Marx (Kerla Hybrid) for ₹200/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Burle Marx (Kerla Hybrid).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Burle Marx (Kerla Hybrid)
+                    </p>
+                    <p class="blueberry">
+                        A lush hybrid with rice green leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹200/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Burle Marx (Kerla Hybrid) for ₹200/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Ciylon Gold p-23">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Ciylon Gold.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Ciylon Gold
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Gold for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Ciylon Gold.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Ciylon Gold
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Gold for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Ciylon Gold.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Ciylon Gold
-                </p>
-                <p class="blueberry">
-                A radiant philodendron with bright golden foliage.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Gold for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Ciylon Gold.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Ciylon Gold
+                    </p>
+                    <p class="blueberry">
+                        A radiant philodendron with bright golden foliage.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Gold for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Ciylon Green p-24">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Ciylon Green.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Ciylon Green
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Green for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Ciylon Green.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Ciylon Green
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Green for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Ciylon Green.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Ciylon Green
-                </p>
-                <p class="blueberry">
-                A classic variety with deep green leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Green for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Ciylon Green.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Ciylon Green
+                    </p>
+                    <p class="blueberry">
+                        A classic variety with deep green leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Green for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Ciylon Red p-25">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Ciylon Red
-                </p>
-                <p class="ordernow-text">
-                ₹50/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Red for ₹50/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Ciylon Red
+                        </p>
+                        <p class="ordernow-text">
+                            ₹50/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Red for ₹50/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Ciylon Red
-                </p>
-                <p class="blueberry">
-                A bold plant with striking red leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹50/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Red for ₹50/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Ciylon Red.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Ciylon Red
+                    </p>
+                    <p class="blueberry">
+                        A bold plant with striking red leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹50/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Ciylon Red for ₹50/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Moonlight p-26">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Moonlight.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Moonlight
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Moonlight for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Moonlight.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Moonlight
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Moonlight for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Moonlight.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Moonlight
-                </p>
-                <p class="blueberry">
-                A vibrant philodendron with bright lime-green leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Moonlight for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Moonlight.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Moonlight
+                    </p>
+                    <p class="blueberry">
+                        A vibrant philodendron with bright lime-green leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Moonlight for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Pariso Verde p-27">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Pariso Verde.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Pariso Verde
-                </p>
-                <p class="ordernow-text">
-                ₹250/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pariso Verde for ₹250/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Pariso Verde.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Pariso Verde
+                        </p>
+                        <p class="ordernow-text">
+                            ₹250/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pariso Verde for ₹250/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Pariso Verde.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Pariso Verde
-                </p>
-                <p class="blueberry">
-                A rare beauty with unique marbled leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹250/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pariso Verde for ₹250/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Pariso Verde.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Pariso Verde
+                    </p>
+                    <p class="blueberry">
+                        A rare beauty with unique marbled leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹250/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pariso Verde for ₹250/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Philodendron Pink Princess p-28">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Pink Princess.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Pink Princess
-                </p>
-                <p class="ordernow-text">
-                ₹150/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pink Princess for ₹150/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Pink Princess.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Pink Princess
+                        </p>
+                        <p class="ordernow-text">
+                            ₹150/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pink Princess for ₹150/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Pink Princess.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Pink Princess
-                </p>
-                <p class="blueberry">
-                A regal plant with stunning pink and green foliage.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹150/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pink Princess for ₹150/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Pink Princess.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Pink Princess
+                    </p>
+                    <p class="blueberry">
+                        A regal plant with stunning pink and green foliage.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹150/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Pink Princess for ₹150/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Philodendron Rojcongo p-29">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Rojocongo.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Rojocongo
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Rojocongo for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Rojocongo.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Rojocongo
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Rojocongo for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Rojocongo.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Rojocongo
-                </p>
-                <p class="blueberry">
-                A dramatic philodendron with deep burgundy leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Rojocongo for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Rojocongo.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Rojocongo
+                    </p>
+                    <p class="blueberry">
+                        A dramatic philodendron with deep burgundy leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Rojocongo for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Philodendron Xanadu Gold p-30">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Philodendron Xanadu Gold.png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Philodendron Xanadu Gold
-                </p>
-                <p class="ordernow-text">
-                ₹150/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Xanadu Gold for ₹150/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Philodendron Xanadu Gold.png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Philodendron Xanadu Gold
+                        </p>
+                        <p class="ordernow-text">
+                            ₹150/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Xanadu Gold for ₹150/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Philodendron Xanadu Gold.png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Philodendron Xanadu Gold
-                </p>
-                <p class="blueberry">
-                A golden-leaved philodendron with a topical flair.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹150/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Xanadu Gold for ₹150/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Philodendron Xanadu Gold.png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Philodendron Xanadu Gold
+                    </p>
+                    <p class="blueberry">
+                        A golden-leaved philodendron with a topical flair.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹150/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Philodendron Xanadu Gold for ₹150/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
 
 
                 <details class="product card2 group box" data-name="Scindapsus Aures (Satin Pothos) p-31">
-                <summary class="product-summary">
-                <img loading="lazy" src="img/Scindapsus Aures (Satin Pothos).png" alt="" class="w-44 card1img product-image" />
-                <p class="cardtxt">
-                Scindapsus Aures (Satin Pothos)
-                </p>
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p style="text-align: right; margin-top: -10px;">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Scindapsus Aures (Satin Pothos) for ₹75/-" target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                    <summary class="product-summary">
+                        <img loading="lazy" src="img/Scindapsus Aures (Satin Pothos).png" alt=""
+                            class="w-44 card1img product-image" />
+                        <p class="cardtxt">
+                            Scindapsus Aures (Satin Pothos)
+                        </p>
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p style="text-align: right; margin-top: -10px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Scindapsus Aures (Satin Pothos) for ₹75/-"
+                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                 margin-top: 25px;
                 text-align: center;
                 padding: 4px 8px; /* Adjust padding for smaller screens */
                 font-size: 10px; /* Adjust font size for smaller screens */
                 }}">Order Now</a>
-                </p>
+                        </p>
 
 
 
-                </summary>
-                <div class="zoomed-image">
-                <img loading="lazy" src="img/Scindapsus Aures (Satin Pothos).png" alt="" />
-                </div>
-                <p class="cardtxt">
-                Scindapsus Aures (Satin Pothos)
-                </p>
-                <p class="blueberry">
-                A luxurious pothos with velvety, silver-splashed leaves.
-                </p>
-                <div class="ordernow">
-                <p class="ordernow-text">
-                ₹75/-
-                </p>
-                <p class="btun4 butn">
-                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Scindapsus Aures (Satin Pothos) for ₹75/-" target="_blank">Order Now</a>
-                </p>
-                </div>
+                    </summary>
+                    <div class="zoomed-image">
+                        <img loading="lazy" src="img/Scindapsus Aures (Satin Pothos).png" alt="" />
+                    </div>
+                    <p class="cardtxt">
+                        Scindapsus Aures (Satin Pothos)
+                    </p>
+                    <p class="blueberry">
+                        A luxurious pothos with velvety, silver-splashed leaves.
+                    </p>
+                    <div class="ordernow">
+                        <p class="ordernow-text">
+                            ₹75/-
+                        </p>
+                        <p class="btun4 butn">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Scindapsus Aures (Satin Pothos) for ₹75/-"
+                                target="_blank">Order Now</a>
+                        </p>
+                    </div>
                 </details>
             </div>
             <div class="inline-flex gap-5">
                 <button class="expbtn  text-gray-900 px-8" id="load-more">
-                       Show More
-                        <ion-icon name="caret-forward-sharp"></ion-icon>
-                    </button>
+                    Show More
+                    <ion-icon name="caret-forward-sharp"></ion-icon>
+                </button>
                 <button class="expbtn  text-gray-900 px-8" id="show-less" style="display: none;">
-                        Show Less
-                        <ion-icon name="caret-forward-sharp"></ion-icon>
-                    </button>
+                    Show Less
+                    <ion-icon name="caret-forward-sharp"></ion-icon>
+                </button>
             </div>
     </section>
 
@@ -1364,27 +1530,32 @@
     <!-- ========== END PLANT LIST ========== -->
 
     <!-- ========== Start Footer ========== -->
-    <footer id="bottom"class="py-10 w-full bg-[url('img/heromain2.jpg')] bg-center bg-cover" style="background-image: url(img/heromain2.jpg);">
+    <footer id="bottom" class="py-10 w-full bg-[url('img/heromain2.jpg')] bg-center bg-cover"
+        style="background-image: url(img/heromain2.jpg);">
         <div class="responsive flex flex-col items-center justify-center gap-8">
             <p class="uppercase text-white text-2xl font-semibold tracking-wide">
                 contact us
             </p>
             <p class="text-white text-center">
-                Over there history as plants, the main uses of Plants are in cooking, making, dessert as a spread on <br /> bread , as addition to various beverages such as tea, and as a sweetener in same commercial beverages.
+                Over there history as plants, the main uses of Plants are in cooking, making, dessert as a spread on
+                <br /> bread , as addition to various beverages such as tea, and as a sweetener in same commercial
+                beverages.
             </p>
             <div class="flex flex-row gap-5 text-3xl first:[&_ion-icon]:text-glowylw [&_ion-icon]:text-white">
                 <ion-icon class="footer-logo-icon" name="logo-facebook"></ion-icon>
                 <a href="https://wa.me/+919146869232" target="_blank">
                     <ion-icon class="footer-logo-icon" name="logo-whatsapp"></ion-icon>
                 </a>
-                <a href="https://www.instagram.com/premsexotics/?igsh=MXI1amNjYjNsaTRjdw%3D%3D&utm_source=qr" target="_blank">
+                <a href="https://www.instagram.com/premsexotics/?igsh=MXI1amNjYjNsaTRjdw%3D%3D&utm_source=qr"
+                    target="_blank">
                     <ion-icon class="footer-logo-icon" name="logo-instagram"></ion-icon>
                 </a>
                 <ion-icon class="footer-logo-icon" name="logo-google"></ion-icon>
             </div>
             <div class="flex flex-row gap-10 pt-10 flex-wrap items-center justify-center">
                 <div class="inline-flex gap-3 items-center">
-                    <a href="https://www.google.com/maps?q=18.704167,73.682694" target="_blank" class="flex items-center space-x-2">
+                    <a href="https://www.google.com/maps?q=18.704167,73.682694" target="_blank"
+                        class="flex items-center space-x-2">
                         <ion-icon name="location-sharp" class="text-glowylw text-2xl"></ion-icon>
                         <p class="font-semibold text-white tracking-wide">
                             Talegaon Dabhade, Maharashtra 410506
@@ -1399,7 +1570,8 @@
                 </div>
                 <div class="inline-flex gap-3 items-center">
                     <ion-icon name="mail-open-sharp" class="text-glowylw text-2xl"></ion-icon>
-                    <a href="mailto:premsexotics@gmail.com" class="font-semibold text-white tracking-wide">premsexotics@gmail.com</a>
+                    <a href="mailto:premsexotics@gmail.com"
+                        class="font-semibold text-white tracking-wide">premsexotics@gmail.com</a>
                 </div>
 
             </div>
@@ -1419,32 +1591,32 @@
     <!-- ========== End Top BTN ========== -->
 
     <!-- ========== Start Script ========== -->
-     <script src="index.js"></script>
+    <script src="index.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
-        document.getElementById('search-icon').onclick = function() {
+        document.getElementById('search-icon').onclick = function () {
             var searchInput = document.getElementById('search-input');
             this.classList.toggle('active');
             if (searchInput.style.display === 'none' || searchInput.style.width === '0px') {
                 searchInput.style.display = 'block';
-                setTimeout(function() {
+                setTimeout(function () {
                     searchInput.style.width = '150px'; // Adjust width as needed
                 }, 10); // Small delay to trigger transition
             } else {
                 searchInput.style.width = '0';
-                setTimeout(function() {
+                setTimeout(function () {
                     searchInput.style.display = 'none';
                 }, 300); // Matches the transition duration
             }
         };
 
         // Add search functionality
-        document.getElementById('search-input').oninput = function() {
+        document.getElementById('search-input').oninput = function () {
             var filter = this.value.toLowerCase();
             var products = document.querySelectorAll('.product');
-            products.forEach(function(product) {
+            products.forEach(function (product) {
                 var name = product.getAttribute('data-name').toLowerCase();
                 if (name.includes(filter)) {
                     product.style.display = 'block';
@@ -1453,6 +1625,44 @@
                 }
             });
         };
+
+        // Cart functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const productName = this.getAttribute('data-product-name');
+                const productPrice = parseFloat(this.getAttribute('data-product-price'));
+                const quantityInput = document.getElementById(`quantity-${productName.replace(/ /g, '-').replace(/[()]/g, '')}`);
+                const productQuantity = parseInt(quantityInput.value);
+
+                const existingProduct = cart.find(product => product.name === productName);
+
+                if (existingProduct) {
+                    existingProduct.quantity += productQuantity;
+                } else {
+                    cart.push({name: productName, price: productPrice, quantity: productQuantity});
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartIcon();
+            });
+        });
+
+        function updateCartIcon() {
+            const cartIcon = document.querySelector('ion-icon[name="cart-outline"]');
+            const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
+            const cartCountBadge = document.getElementById('cart-count');
+            if (totalItems > 0) {
+                cartCountBadge.innerText = totalItems;
+                cartCountBadge.style.display = 'flex';
+            } else {
+                cartCountBadge.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartIcon);
+
     </script>
     <!-- ========== End Script ========== -->
 </body>
