@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        /* Your CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .cart-page {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .cart-details {
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .cart-details h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        td img {
+            width: 100%;
+            max-width: 80px;
+            height: auto;
+        }
+
+        .quantity-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-button {
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .quantity {
+            width: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 0 3px;
+            padding: 2px;
+            font-size: 12px;
+        }
+
+        .remove-button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .remove-button:hover {
+            background-color: #e60000;
+        }
+
+        .cart-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-summary h2 {
+            margin-bottom: 10px;
+        }
+
+        .coupon-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .coupon-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 14px;
+        }
+
+        .coupon-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            font-size: 14px;
+        }
+
+        .coupon-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .cart-summary p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .cart-summary h3 {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .checkout-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+
+        @media (min-width: 768px) {
+            .cart-page {
+                grid-template-columns: 2fr 1fr;
+                gap: 20px;
+            }
+
+            .cart-details {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .cart-page {
+                padding: 10px;
+            }
+
+            table,
+            th,
+            td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .quantity-button,
+            .quantity {
+                padding: 2px 4px;
+                font-size: 12px;
+            }
+
+            .remove-button {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            .coupon-form input,
+            .coupon-form button {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .checkout-button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            th,
+            td {
+                padding: 8px;
+                font-size: 10px;
+            }
+
+            .quantity-button,
+            .quantity {
+                padding: 2px;
+                font-size: 10px;
+            }
+
+            .remove-button {
+                padding: 3px 8px;
+                font-size: 10px;
+            }
+
+            .coupon-form input,
+            .coupon-form button {
+                padding: 6px;
+                font-size: 10px;
+            }
+
+            .checkout-button {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart-page">
+        <div class="cart-details">
+            <h1>Cart Details</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Sub Total</th>
+                        <th>Remove Product</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <h2>Have coupon?</h2>
+            <form action="" method="post" class="coupon-form">
+                <input type="text" name="coupon" placeholder="Coupon code">
+                <button type="submit">Apply</button>
+            </form>
+            <p>Total Products: <span id="total-products">₹ 0.00</span></p>
+            <p>Delivery charges: <span id="delivery-charges">₹ 0.00</span></p>
+            <h3>Grand Total: <span id="grand-total">₹ 0.00</span></h3>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to update cart total based on stored data
+        function updateCartTotal() {
+            let totalProducts = 0;
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartItems.forEach(item => {
+                totalProducts += item.price * item.quantity;
+            });
+
+            const deliveryCharges = 100; // Assuming fixed delivery charges
+            const grandTotal = totalProducts + deliveryCharges;
+
+            document.getElementById('total-products').textContent = `₹ ${totalProducts.toFixed(2)}`;
+            document.getElementById('delivery-charges').textContent = `₹ ${deliveryCharges.toFixed(2)}`;
+            document.getElementById('grand-total').textContent = `₹ ${grandTotal.toFixed(2)}`;
+        }
+
+        // Function to render cart items dynamically
+        function renderCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="img/${item.name}.png" alt="${item.name}"></td>
+                    <td>${item.name}</td>
+                    <td>₹ ${item.price.toFixed(2)}</td>
+                    <td>
+                        <div class="quantity-form">
+                            <button class="quantity-button decrement">-</button>
+                            <input type="text" class="quantity" value="${item.quantity}" readonly>
+                            <button class="quantity-button increment">+</button>
+                        </div>
+                    </td>
+                    <td>₹ ${(item.price * item.quantity).toFixed(2)}</td>
+                    <td><button class="remove-button">Remove</button></td>
+                `;
+
+                cartItemsContainer.appendChild(row);
+            });
+
+            updateCartTotal();
+        }
+
+        // Function to handle quantity buttons
+        function handleQuantityButtons(event) {
+            const button = event.target;
+            const isIncrement = button.classList.contains('increment');
+            const isDecrement = button.classList.contains('decrement');
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemName = button.closest('tr').querySelector('td:nth-child(2)').textContent;
+
+            const itemIndex = cartItems.findIndex(item => item.name === itemName);
+
+            if (isIncrement && itemIndex !== -1) {
+                cartItems[itemIndex].quantity++;
+            } else if (isDecrement && itemIndex !== -1 && cartItems[itemIndex].quantity > 1) {
+                cartItems[itemIndex].quantity--;
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            renderCartItems();
+        }
+
+        // Function to handle remove buttons
+        function handleRemoveButtons(event) {
+            const button = event.target;
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemName = button.closest('tr').querySelector('td:nth-child(2)').textContent;
+
+            const updatedCartItems = cartItems.filter(item => item.name !== itemName);
+            localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+            renderCartItems();
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', renderCartItems);
+        document.getElementById('cart-items').addEventListener('click', function (event) {
+            if (event.target.classList.contains('increment') || event.target.classList.contains('decrement')) {
+                handleQuantityButtons(event);
+            } else if (event.target.classList.contains('remove-button')) {
+                handleRemoveButtons(event);
+            }
+        });
+    </script>
+</body>
+
+</html>
