@@ -13,6 +13,9 @@
     <title>PREMS EXOTICS</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -133,7 +136,7 @@
             <div
                 class="products-container box-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 py-10 w-full">
                 <details class="product card2 group box" data-name="Crassula Ovata p-1">
-                    <summary class="product-summary" data-name="Product 1" data-price="100">
+                    <summary class="product-summary" data-name="Crassula Ovata" data-price="100">
                         <img loading="lazy" src="img/Crassula Ovata.png" alt="Crassula Ovata"
                             class="w-44 card1img product-image" />
                         <p class="cardtxt product-name">
@@ -146,19 +149,19 @@
                             <label for="quantity-Crassula-Ovata"
                                 style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
                                 Quantity:
-                                <input type="number" id="quantity-Product-1" class="product-quantity" value="1" min="1"
+                                <input type="number" id="quantity-Crassula-Ovata" class="product-quantity" value="1" min="1"
                                     style="margin-left: 5px; width: 40px;">
                             </label>
 
                             <p class="hover" style="margin-top: -5px;">
                                 <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-"
-                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 15px; color: white; border-radius: 30px; margin-left: 28px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                                 margin-top: 25px;
                                 text-align: center;
                                 padding: 4px 8px; /* Adjust padding for smaller screens */
                                 font-size: 5px; /* Adjust font size for smaller screens */
                                 }">Order Now</a>
-                                <button class="add-to-cart-btn hover" data-product-name="Product 1"
+                                <button class="add-to-cart-btn hover" data-product-name="Crassula Ovata"
                                     data-product-price="100" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
                                     margin-top: 25px;
                                     text-align: center;
@@ -189,7 +192,7 @@
                     </div>
                 </details>
                 <details class="product card2 group box" data-name="Crassula Ovata Variegated (Rare) p-2">
-                    <summary class="product-summary" data-name="Product 2" data-price="350">
+                    <summary class="product-summary" data-name="Crassula Ovata Variegated (Rare)" data-price="350">
                         <img loading="lazy" src="img/Crassula Ovata Variegated (Rare).png" alt=""
                             class="w-44 card1img product-image" />
                         <p class="cardtxt product-name">
@@ -205,43 +208,24 @@
                                 <input type="number" id="quantity-Crassula-Ovata-Variegated-Rare"
                                     class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
                             </label>
-                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata (Rare) for ₹350/-"
-                                    target="_blank"
-                                    style="
-                                        padding: 1px 5px;
-                                        background-color: #4caf50;
-                                        font-size: 15px;
-                                        color: white;
-                                        border-radius: 30px;
-                                        margin-left: 28px;
-                                        transition: background-color 0.3s ease;
-                                        @media screen and (max-width: 768px) {
-                                            margin-top: 25px;
-                                            text-align: center;
-                                            padding: 4px 8px; /* Adjust padding for smaller screens */
-                                            font-size: 5px; /* Adjust font size for smaller screens */
-                                        }
-                                    ">Order
-                                    Now</a>
-                                <button class="add-to-cart-btn" data-product-name="Crassula Ovata Variegated (Rare)"
-                                    data-product-price="350"
-                                    style="
-                                        padding: 1px 5px;
-                                        background-color: #4caf50;
-                                        font-size: 14px;
-                                        color: white;
-                                        border-radius: 30px;
-                                        margin-left: 28px;
-                                        margin-top: 10px;
-                                        transition: background-color 0.3s ease;
-                                        @media screen and (max-width: 768px) {
-                                            margin-top: 25px;
-                                            text-align: center;
-                                            padding: 1px 5px; /* Adjust padding for smaller screens */
-                                            font-size: 5px; /* Adjust font size for smaller screens */
-                                        }
-                                    ">Add
-                                    to Cart</button>
+                            <p class="hover" style="margin-top: -5px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata Variegated (Rare) for ₹350/-"
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Crassula Ovata Variegated (Rare)"
+                                data-product-price="350" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
                         </div>
                     </summary>
                     <div class="zoomed-image" id="crassula-ovata-variegated">
@@ -265,29 +249,43 @@
                 </details>
 
                 <details class="product card2 group box" data-name="Dracena Moonshine p-3">
-                    <summary class="product-summary">
+                    <summary class="product-summary" data-name="Dracena Moonshine" data-price="75">
                         <img loading="lazy" src="img/Dracena Moonshine.png" alt=""
                             class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                        <p class="cardtxt product-name">
                             Dracena Moonshine
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Dracena-Moonshine"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Dracena-Moonshine"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
                             <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                            margin-top: 25px;
-                            text-align: center;
-                            padding: 4px 8px; /* Adjust padding for smaller screens */
-                            font-size: 10px; /* Adjust font size for smaller screens */
-                          }}">Order Now</a>
-                        </p>
-
-
-
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Dracena Moonshine"
+                                data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image" id="dracena-moonshine">
+                    <div class="zoomed-image" id="Dracena-Moonshine">
                         <img loading="lazy" src="img/Dracena Moonshine.png" alt="" />
                     </div>
                     <p class="cardtxt">
@@ -307,27 +305,43 @@
                     </div>
                 </details>
                 <details class="product card2 group box" data-name="Money Plant (Black) p-4">
-                    <summary class="product-summary">
+                    <summary class="product-summary" data-name="Money Plant (Black)" data-price="75">
                         <img loading="lazy" src="img/Money Plant (Black).png" alt=""
                             class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                        <p class="cardtxt product-name">
                             Money Plant (Black)
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Black"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Black"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
                             <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                            margin-top: 25px;
-                            text-align: center;
-                            padding: 4px 8px; /* Adjust padding for smaller screens */
-                            font-size: 10px; /* Adjust font size for smaller screens */
-                          }}">Order Now</a>
-                        </p>
-
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Money Plant (Black)"
+                                data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image" id="money-plant-black">
+                    <div class="zoomed-image" id="Money-Plant-Black">
                         <img loading="lazy" src="img/Money Plant (Black).png" alt="" />
                     </div>
                     <p class="cardtxt">
@@ -341,36 +355,50 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
                                 target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant (Gold) p-5">
-                    <summary class="product-summary">
+                    <summary class="product-summary" data-name="Money Plant (Gold)" data-price="75">
                         <img loading="lazy" src="img/Money Plant (Gold) .png" alt=""
                             class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                        <p class="cardtxt product-name">
                             Money Plant (Gold)
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Gold"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Gold"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Money Plant (Gold)"
+                                data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
+                    <div class="zoomed-image" id="Money-Plant-Gold">
                         <img loading="lazy" src="img/Money Plant (Gold) .png" alt="" />
                     </div>
                     <p class="cardtxt">
@@ -384,36 +412,50 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Gold) for ₹75/-"
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
                                 target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant (Green) p-6">
-                    <summary class="product-summary">
+                    <summary class="product-summary" data-name="Money Plant (Green)" data-price="75">
                         <img loading="lazy" src="img/Money Plant (Green).png" alt=""
                             class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                        <p class="cardtxt product-name">
                             Money Plant (Green)
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Green"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Green"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Money Plant (Green)"
+                                data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
+                    <div class="zoomed-image" id="Money-Plant-Green">
                         <img loading="lazy" src="img/Money Plant (Green).png" alt="" />
                     </div>
                     <p class="cardtxt">
@@ -427,36 +469,50 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Green) for ₹75/-"
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
                                 target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Compact (Manjula) p-7">
-                    <summary class="product-summary">
+                    <summary class="product-summary" data-name="Money Plant Compact (Manjula)" data-price="75">
                         <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt=""
                             class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                        <p class="cardtxt product-name">
                             Money Plant Compact (Manjula)
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Compact-Manjula"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Compact-Manjula"
+                                    class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant (Black) for ₹75/-"
+                                target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white;display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 4px 8px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Order
+                                Now</a>
+                            <button class="add-to-cart-btn" data-product-name="Money Plant Compact (Manjula)"
+                                data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                margin-top: 25px;
+                                text-align: center;
+                                padding: 1px 5px; /* Adjust padding for smaller screens */
+                                font-size: 5px; /* Adjust font size for smaller screens */
+                                }">Add
+                                to Cart</button>
+                                </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
+                    <div class="zoomed-image" id="Money-Plant-Compact-Manjula">
                         <img loading="lazy" src="img/Money Plant Compact (Manjula).png" alt="" />
                     </div>
                     <p class="cardtxt">
@@ -470,38 +526,53 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Compact (Manjula) for ₹75/-"
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Dracena Moonshine for ₹75/-"
                                 target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Gold King p-8">
-                    <summary class="product-summary">
-                        <img loading="lazy" src="img/Money Plant Gold King.png" alt=""
-                            class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                    <summary class="product-summary" data-name="Money Plant Gold King" data-price="100">
+                        <img loading="lazy" src="img/Money Plant Gold King.png" alt="" class="w-44 card1img product-image" />
+                        <p class="cardtxt product-name">
                             Money Plant Gold King
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹100/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Gold-King"
+                                style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Gold-King" class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-"
+                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white; display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                        margin-top: 25px;
+                                        text-align: center;
+                                        padding: 4px 8px; /* Adjust padding for smaller screens */
+                                        font-size: 5px; /* Adjust font size for smaller screens */
+                                        }">Order Now</a>
+                                <button class="add-to-cart-btn" data-product-name="Money Plant Gold King" data-product-price="100" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                    margin-top: 25px;
+                                    text-align: center;
+                                    padding: 1px 5px; /* Adjust padding for smaller screens */
+                                    font-size: 5px; /* Adjust font size for smaller screens */
+                                    }">Add to Cart</button>
+                            </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
-                        <img loading="lazy" src="img/Money Plant Gold King.png" alt="" />
+                    <div class="zoomed-image" id="Money-Plant-Gold-King">
+                        <div class="slideshow-container">
+                            <img src="img/Monstera Peru.png" alt="Monstera Peru" />
+                            <img src="img/Crassula Ovata.png" alt="Slideshow Image 1" />
+                            <img src="img/Monstera Peru.png" alt="Slideshow Image 2" />
+                            <!-- Add more images as needed -->
+                        </div>
                     </div>
+
                     <p class="cardtxt">
                         Money Plant Gold King
                     </p>
@@ -513,38 +584,51 @@
                             ₹100/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-"
-                                target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Gold King for ₹100/-" target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant Marble Queen p-9">
-                    <summary class="product-summary">
-                        <img loading="lazy" src="img/Money Plant Marble Queen.png" alt=""
-                            class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                    <summary class="product-summary" data-name="Money Plant Marble Queen" data-price="100">
+                        <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" class="w-44 card1img product-image" />
+                        <p class="cardtxt product-name">
                             Money Plant Marble Queen
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹100/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-Marble-Queen" style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-Marble-Queen" class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
+                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white; display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                        margin-top: 25px;
+                                        text-align: center;
+                                        padding: 4px 8px; /* Adjust padding for smaller screens */
+                                        font-size: 5px; /* Adjust font size for smaller screens */
+                                        }">Order Now</a>
+                                <button class="add-to-cart-btn" data-product-name="Money Plant Marble Queen" data-product-price="100" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                    margin-top: 25px;
+                                    text-align: center;
+                                    padding: 1px 5px; /* Adjust padding for smaller screens */
+                                    font-size: 5px; /* Adjust font size for smaller screens */
+                                    }">Add to Cart</button>
+                            </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
-                        <img loading="lazy" src="img/Money Plant Marble Queen.png" alt="" />
+                    <div class="zoomed-image" id="Money-Plant-Marble-Queen">
+                        <div class="slideshow-container">
+                            <img src="img/Monstera Peru.png" alt="Monstera Peru" />
+                            <img src="img/Crassula Ovata.png" alt="Slideshow Image 1" />
+                            <img src="img/Monstera Peru.png" alt="Slideshow Image 2" />
+                            <!-- Add more images as needed -->
+                        </div>
                     </div>
+
                     <p class="cardtxt">
                         Money Plant Marble Queen
                     </p>
@@ -556,38 +640,51 @@
                             ₹100/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-"
-                                target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant Marble Queen for ₹100/-" target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
 
                 <details class="product card2 group box" data-name="Money Plant N Joy p-10">
-                    <summary class="product-summary">
-                        <img loading="lazy" src="img/Money Plant N joy.png" alt=""
-                            class="w-44 card1img product-image" />
-                        <p class="cardtxt">
+                    <summary class="product-summary" data-name="Money Plant N Joy" data-price="75">
+                        <img loading="lazy" src="img/Money Plant N Joy.png" alt="" class="w-44 card1img product-image" />
+                        <p class="cardtxt product-name">
                             Money Plant N Joy
                         </p>
-                        <p class="ordernow-text">
+                        <p class="ordernow-text product-price">
                             ₹75/-
                         </p>
-                        <p style="text-align: right; margin-top: -10px;">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-"
-                                target="_blank" style="display: inline-block; padding: 5px 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; border: none; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
-                margin-top: 25px;
-                text-align: center;
-                padding: 4px 8px; /* Adjust padding for smaller screens */
-                font-size: 10px; /* Adjust font size for smaller screens */
-                }}">Order Now</a>
-                        </p>
-
-
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="quantity-Money-Plant-N-Joy" style="display: inline-flex; align-items: center; background-color: #d3f5ab; padding: 8px; border-radius: 5px;">
+                                Quantity:
+                                <input type="number" id="quantity-Money-Plant-N-Joy" class="product-quantity" value="1" min="1" style="margin-left: 5px; width: 40px;">
+                            </label>
+                            <p class="hover" style="margin-top: -5px;">
+                                <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N Joy for ₹75/-"
+                                    target="_blank" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 13px; color: white; display: inline-block; border-radius: 30px; margin-left: 28px; align-items: center; justify-content: center; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                        margin-top: 25px;
+                                        text-align: center;
+                                        padding: 4px 8px; /* Adjust padding for smaller screens */
+                                        font-size: 5px; /* Adjust font size for smaller screens */
+                                        }">Order Now</a>
+                                <button class="add-to-cart-btn" data-product-name="Money Plant N Joy" data-product-price="75" style=" padding: 1px 5px; background-color: #4CAF50; font-size: 14px; color: white; border-radius: 30px; margin-left: 28px; margin-top: 10px; transition: background-color 0.3s ease; @media screen and (max-width: 768px) {
+                                    margin-top: 25px;
+                                    text-align: center;
+                                    padding: 1px 5px; /* Adjust padding for smaller screens */
+                                    font-size: 5px; /* Adjust font size for smaller screens */
+                                    }">Add to Cart</button>
+                            </p>
+                        </div>
                     </summary>
-                    <div class="zoomed-image">
-                        <img loading="lazy" src="img/Money Plant N joy.png" alt="" />
+                    <div class="zoomed-image" id="Money-Plant-N-Joy">
+                        <div class="slideshow-container">
+                            <img src="img/Monstera Peru.png" alt="Monstera Peru" />
+                            <img src="img/Crassula Ovata.png" alt="Slideshow Image 1" />
+                            <img src="img/Monstera Peru.png" alt="Slideshow Image 2" />
+                            <!-- Add more images as needed -->
+                        </div>
                     </div>
+
                     <p class="cardtxt">
                         Money Plant N Joy
                     </p>
@@ -599,11 +696,11 @@
                             ₹75/-
                         </p>
                         <p class="btun4 butn">
-                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N joy for ₹75/-"
-                                target="_blank">Order Now</a>
+                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Money Plant N Joy for ₹75/-" target="_blank">Order Now</a>
                         </p>
                     </div>
                 </details>
+
 
                 <details class="product card2 group box" data-name="Monstera Peru p-11">
                     <summary class="product-summary">
@@ -628,8 +725,14 @@
 
                     </summary>
                     <div class="zoomed-image">
-                        <img loading="lazy" src="img/Monstera Peru.png" alt="" />
+                        <div class="slideshow-container">
+                            <img src="img/Monstera Peru.png" alt="Monstera Peru" />
+                            <img src="img/Crassula Ovata.png" alt="Slideshow Image 1" />
+                            <img src="img/Monstera Peru.png" alt="Slideshow Image 2" />
+                            <!-- Add more images as needed -->
+                        </div>
                     </div>
+
                     <p class="cardtxt">
                         Monstera Peru
                     </p>
@@ -1662,6 +1765,20 @@
         }
 
         document.addEventListener('DOMContentLoaded', updateCartIcon);
+        $(document).ready(function () {
+            $('.slideshow-container').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                // Add any other options you need
+            });
+        });
+
+
+
 
     </script>
     <!-- ========== End Script ========== -->
