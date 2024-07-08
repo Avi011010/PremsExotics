@@ -107,38 +107,6 @@
             margin-bottom: 10px;
         }
 
-        .coupon-form {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .coupon-form input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px 0 0 5px;
-            font-size: 14px;
-        }
-
-        .coupon-form button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-            font-size: 14px;
-        }
-
-        .coupon-form button:hover {
-            background-color: #0056b3;
-        }
-
-        .cart-summary p {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
         .cart-summary h3 {
             margin: 20px 0;
             font-size: 18px;
@@ -195,22 +163,10 @@
                 font-size: 12px;
             }
 
-            .coupon-form input,
-            .coupon-form button {
-                padding: 8px;
-                font-size: 12px;
-            }
-
-            .checkout-button {
-                padding: 10px;
-                font-size: 14px;
-            }
-        }
-
         @media (max-width: 480px) {
             th,
             td {
-                padding: 8px;
+                padding: 6px;
                 font-size: 10px;
             }
 
@@ -222,20 +178,8 @@
 
             .remove-button {
                 padding: 3px 8px;
-                font-size: 10px;
+                font-size: 8px;
             }
-
-            .coupon-form input,
-            .coupon-form button {
-                padding: 6px;
-                font-size: 10px;
-            }
-
-            .checkout-button {
-                padding: 8px;
-                font-size: 12px;
-            }
-        }
     </style>
 </head>
 
@@ -248,8 +192,8 @@
                     <tr>
                         <th style="white-space: nowrap;">Image</th>
                         <th style="white-space: nowrap;">Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                        <th style="white-space: nowrap;">Price</th>
+                        <th style="white-space: nowrap;">Quantity</th>
                         <th>Sub Total</th>
                         <th>Remove Product</th>
                     </tr>
@@ -260,11 +204,6 @@
             </table>
         </div>
         <div class="cart-summary">
-            <h2>Have coupon?</h2>
-            <form action="" method="post" class="coupon-form">
-                <input type="text" name="coupon" placeholder="Coupon code">
-                <button type="submit">Apply</button>
-            </form>
             <p>Total Products: <span id="total-products">₹ 0.00</span></p>
             <p>Delivery charges: <span id="delivery-charges">₹ 0.00</span></p>
             <h3>Grand Total: <span id="grand-total">₹ 0.00</span></h3>
@@ -282,7 +221,7 @@
                 totalProducts += item.price * item.quantity;
             });
 
-            const deliveryCharges = 100; // Assuming fixed delivery charges
+            const deliveryCharges = 200; // Assuming fixed delivery charges
             const grandTotal = totalProducts + deliveryCharges;
 
             document.getElementById('total-products').textContent = `₹ ${totalProducts.toFixed(2)}`;
