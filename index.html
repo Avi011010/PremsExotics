@@ -28,7 +28,20 @@
                             border-radius: 10px;
                             box-shadow: 0 0 10px #9CCD62;
                         }
-
+                        .cart-count-badge {
+                            position: absolute;
+                            top: -10px;
+                            right: -10px;
+                            background-color: red;
+                            color: white;
+                            border-radius: 50%;
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                        }
                     </style>
                 </head>
 
@@ -82,8 +95,15 @@
                             <div class="search-container">
                                 <div class="search-bar">
                                     <a href="plants.html">
-                                        <button id="search-icon"><ion-icon name="search-sharp"></ion-icon></button>
+                                        <button id="search-icon"><ion-icon name="search-sharp" style="font-size: 24px;"></ion-icon></button>
                                     </a>
+                                </div>
+                            </div>
+                            <div class="cart-container">
+                                <div class="search-bar">
+                                    <a href="cart.html" class="relative"> <button id="cart-icon"><ion-icon
+                                                name="cart-sharp" style="font-size: 24px;"></ion-icon></button>
+                                        <span id="cart-count" class="cart-count-badge"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +157,7 @@
                                             ₹100/-
                                         </p>
                                         <p class="btun4 butn">
-                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order the Crassula Ovata for ₹100/-" target="_blank">Order Now</a>
+                                            <a href="plants.html">Order Now</a>
                                         </p>
                                     </div>
                                         </a>
@@ -157,7 +177,7 @@
                                             ₹350/-
                                         </p>
                                         <p class="btun4 butn">
-                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to buy Crassula Ovata Variegated (Rare) for ₹350/-" target="_blank">Order Now</a>
+                                            <a href="plants.html">Order Now</a>
                                         </p>
                                     </div>
                                         </a>
@@ -176,7 +196,7 @@
                                             ₹75/-
                                         </p>
                                         <p class="btun4 butn">
-                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Dracena Moonshine for ₹75/-" target="_blank">Order Now</a>
+                                            <a href="plants.html">Order Now</a>
                                         </p>
                                     </div>
                                         </a>
@@ -195,7 +215,7 @@
                                             ₹75/-
                                         </p>
                                         <p class="btun4 butn">
-                                            <a href="https://wa.me/+919146869232?text=Hi, I would like to order Money Plant (Black) for ₹75/-" target="_blank">Order Now</a>
+                                            <a href="plants.html">Order Now</a>
                                         </p>
                                     </div>
                                         </a>
@@ -343,7 +363,54 @@
                     <!-- ========== Start Script ========== -->
 
                     <script src="index.js"></script>
+                                <script>
+                                let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+                                document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                                    button.addEventListener('click', function () {
+                                        const productName = this.getAttribute('data-product-name');
+                                        const productPrice = parseFloat(this.getAttribute('data-product-price'));
+                                        const quantityInput = document.getElementById(`quantity-${productName.replace(/ /g, '-').replace(/[()]/g, '')}`);
+                                        const productQuantity = parseInt(quantityInput.value);
+
+                                        const existingProduct = cart.find(product => product.name === productName);
+
+                                        if (existingProduct) {
+                                            existingProduct.quantity += productQuantity;
+                                        } else {
+                                            cart.push({name: productName, price: productPrice, quantity: productQuantity});
+                                        }
+
+                                        localStorage.setItem('cart', JSON.stringify(cart));
+                                        updateCartIcon();
+                                    });
+                                });
+
+                                function updateCartIcon() {
+                                    const cartIcon = document.querySelector('ion-icon[name="cart-outline"]');
+                                    const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
+                                    const cartCountBadge = document.getElementById('cart-count');
+                                    if (totalItems > 0) {
+                                        cartCountBadge.innerText = totalItems;
+                                        cartCountBadge.style.display = 'flex';
+                                    } else {
+                                        cartCountBadge.style.display = 'none';
+                                    }
+                                }
+
+                                document.addEventListener('DOMContentLoaded', updateCartIcon);
+                                $(document).ready(function () {
+                                    $('.slideshow-container').slick({
+                                        infinite: true,
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                        arrows: false,
+                                        autoplay: true,
+                                        autoplaySpeed: 1000,
+                                        // Add any other options you need
+                                    });
+                                });
+                            </script>
                     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
                     <!-- ========== End Script ========== -->
