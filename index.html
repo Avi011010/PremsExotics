@@ -88,7 +88,7 @@
                         <a href="#bottom">About Us</a>
                     </li>
                     <li class="linkoutline hover:text-glowylw" data-nav-links>
-                        <a href="3">Our Shop</a>
+                        <a href="#">Our Shop</a>
                     </li>
                     <li class="linkoutline hover:text-glowylw" data-nav-links>
                         <a href="#customer">Our Customer</a>
@@ -1898,88 +1898,88 @@
     <!-- ========== End Top BTN ========== -->
 
     <!-- ========== Start Script ========== -->
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-        document.getElementById('search-icon').onclick = function () {
-            var searchInput = document.getElementById('search-input');
-            this.classList.toggle('active');
-            if (searchInput.style.display === 'none' || searchInput.style.width === '0px') {
-                searchInput.style.display = 'block';
-                setTimeout(function () {
-                    searchInput.style.width = '150px'; // Adjust width as needed
-                }, 10); // Small delay to trigger transition
-            } else {
-                searchInput.style.width = '0';
-                setTimeout(function () {
-                    searchInput.style.display = 'none';
-                }, 300); // Matches the transition duration
-            }
-        };
-
-        // Add search functionality
-        document.getElementById('search-input').oninput = function () {
-            var filter = this.value.toLowerCase();
-            var products = document.querySelectorAll('.product');
-            products.forEach(function (product) {
-                var name = product.getAttribute('data-name').toLowerCase();
-                if (name.includes(filter)) {
-                    product.style.display = 'block';
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            document.getElementById('search-icon').onclick = function () {
+                var searchInput = document.getElementById('search-input');
+                this.classList.toggle('active');
+                if (searchInput.style.display === 'none' || searchInput.style.width === '0px') {
+                    searchInput.style.display = 'block';
+                    setTimeout(function () {
+                        searchInput.style.width = '150px'; // Adjust width as needed
+                    }, 10); // Small delay to trigger transition
                 } else {
-                    product.style.display = 'none';
+                    searchInput.style.width = '0';
+                    setTimeout(function () {
+                        searchInput.style.display = 'none';
+                    }, 300); // Matches the transition duration
                 }
+            };
+
+            // Add search functionality
+            document.getElementById('search-input').oninput = function () {
+                var filter = this.value.toLowerCase();
+                var products = document.querySelectorAll('.product');
+                products.forEach(function (product) {
+                    var name = product.getAttribute('data-name').toLowerCase();
+                    if (name.includes(filter)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            };
+
+            // Cart functionality
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const productName = this.getAttribute('data-product-name');
+                    const productPrice = parseFloat(this.getAttribute('data-product-price'));
+                    const quantityInput = document.getElementById(`quantity-${productName.replace(/ /g, '-').replace(/[()]/g, '')}`);
+                    const productQuantity = parseInt(quantityInput.value);
+
+                    const existingProduct = cart.find(product => product.name === productName);
+
+                    if (existingProduct) {
+                        existingProduct.quantity += productQuantity;
+                    } else {
+                        cart.push({name: productName, price: productPrice, quantity: productQuantity});
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartIcon();
+                });
             });
-        };
 
-        // Cart functionality
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const productName = this.getAttribute('data-product-name');
-                const productPrice = parseFloat(this.getAttribute('data-product-price'));
-                const quantityInput = document.getElementById(quantity-${productName.replace(/ /g, '-').replace(/[()]/g, '')});
-                const productQuantity = parseInt(quantityInput.value);
-
-                const existingProduct = cart.find(product => product.name === productName);
-
-                if (existingProduct) {
-                    existingProduct.quantity += productQuantity;
+            function updateCartIcon() {
+                const cartIcon = document.querySelector('ion-icon[name="cart-outline"]');
+                const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
+                const cartCountBadge = document.getElementById('cart-count');
+                if (totalItems > 0) {
+                    cartCountBadge.innerText = totalItems;
+                    cartCountBadge.style.display = 'flex';
                 } else {
-                    cart.push({name: productName, price: productPrice, quantity: productQuantity});
+                    cartCountBadge.style.display = 'none';
                 }
-
-                localStorage.setItem('cart', JSON.stringify(cart));
-                updateCartIcon();
-            });
-        });
-
-        function updateCartIcon() {
-            const cartIcon = document.querySelector('ion-icon[name="cart-outline"]');
-            const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
-            const cartCountBadge = document.getElementById('cart-count');
-            if (totalItems > 0) {
-                cartCountBadge.innerText = totalItems;
-                cartCountBadge.style.display = 'flex';
-            } else {
-                cartCountBadge.style.display = 'none';
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', updateCartIcon);
-        $(document).ready(function () {
-            $('.slideshow-container').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                // Add any other options you need
+            document.addEventListener('DOMContentLoaded', updateCartIcon);
+            $(document).ready(function () {
+                $('.slideshow-container').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 1000,
+                    // Add any other options you need
+                });
             });
-        });
     </script>
     <!-- ========== End Script ========== -->
 </body>
