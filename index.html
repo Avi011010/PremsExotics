@@ -1933,6 +1933,18 @@
                 });
             };
 
+            window.addEventListener('popstate', function(event) {
+    location.reload();
+});
+
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = this.href;
+    });
+});
+
+
             // Cart functionality
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -1980,10 +1992,6 @@
                     // Add any other options you need
                 });
             });
-
-            window.addEventListener('popstate', function(event) {
-    location.reload();
-});
 
     </script>
     <!-- ========== End Script ========== -->
