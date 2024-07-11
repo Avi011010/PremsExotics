@@ -184,3 +184,8 @@ document.getElementById('search-input').oninput = function() {
         window.addEventListener("scroll", revealElementOnScroll);
 
         window.addEventListener("load", revealElementOnScroll);
+
+window.addEventListener('popstate', function(event) {
+    location.reload();
+});
+
